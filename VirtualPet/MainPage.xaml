@@ -1,7 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="VirtualPet.MainPage">
-    <StackLayout>
+    <StackLayout  BackgroundColor="#b2f372">
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Image VerticalOptions="CenterAndExpand"
+               HorizontalOptions="FillAndExpand"
+               Source="AppLogo"
+               BackgroundColor="Transparent"
+               Aspect="AspectFit"></Image>
+        <Button Text="Play"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                TextColor="#265a43"
+                FontSize="40"
+                BorderWidth="10"
+                BorderColor="#265a43"
+                BackgroundColor="#b2f372"
+                Clicked="Button_Clicked"
+                Padding="20,8"
+                FontAttributes="Bold"
+                CornerRadius="0"
+                Margin="0,100,0,0"/>
+         <Button Text="Options"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                TextColor="#265a43"
+                FontSize="40"
+                BorderWidth="10"
+                BorderColor="#265a43"
+                BackgroundColor="#b2f372"
+                Clicked="Button_Clicked_1"
+                Padding="20,8"
+                FontAttributes="Bold"
+                CornerRadius="0"/>
+            </StackLayout>
     </StackLayout>
 </ContentPage>

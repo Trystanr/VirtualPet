@@ -17,5 +17,27 @@ namespace VirtualPet
         {
             InitializeComponent();
         }
+
+        async void Button_Clicked(System.Object sender, System.EventArgs e) {
+            var modalPage = new PetPage();
+
+            modalPage.Disappearing += (sender2, e2) => {
+                Console.WriteLine("The modal page is dismissed, do something now");
+            };
+
+            await Navigation.PushModalAsync(modalPage);
+            Console.WriteLine("The modal page is now on screen, hit back button");
+        }
+
+        async void Button_Clicked_1(System.Object sender, System.EventArgs e) {
+            var modalPage = new SettingsPage();
+
+            modalPage.Disappearing += (sender2, e2) => {
+                Console.WriteLine("The modal page is dismissed, do something now");
+            };
+
+            await Navigation.PushModalAsync(modalPage);
+            Console.WriteLine("The modal page is now on screen, hit back button");
+        }
     }
 }

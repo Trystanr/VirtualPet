@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="VirtualPet.SettingsPage">
+    <StackLayout  BackgroundColor="#265a43">
+        <!-- Place new controls here -->
+        
+        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Image VerticalOptions="CenterAndExpand"
+               HorizontalOptions="FillAndExpand"
+               Source="AppLogo"
+               BackgroundColor="Transparent"
+               Aspect="AspectFit"></Image>
+            <Label Text="Settings"
+                   HorizontalOptions="CenterAndExpand"></Label>
+            </StackLayout>
+    </StackLayout>
+</ContentPage>
