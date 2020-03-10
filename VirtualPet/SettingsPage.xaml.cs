@@ -8,5 +8,11 @@ namespace VirtualPet {
         public SettingsPage() {
             InitializeComponent();
         }
+
+        async void SettingsQuit(System.Object sender, System.EventArgs e) {
+
+            await Navigation.PopModalAsync();
+
+        }
     }
 }

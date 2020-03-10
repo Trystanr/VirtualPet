@@ -9,7 +9,7 @@
                Source="AppLogo"
                BackgroundColor="Transparent"
                Aspect="AspectFit"></Image>
-        <Button Text="Play"
+            <Button Text="Play"
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="CenterAndExpand"
                 TextColor="#265a43"
@@ -22,7 +22,7 @@
                 FontAttributes="Bold"
                 CornerRadius="0"
                 Margin="0,100,0,0"/>
-         <Button Text="Options"
+            <Button Text="Options"
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="CenterAndExpand"
                 TextColor="#265a43"

@@ -36,6 +36,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Objects\TimeKeeper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Objects\" />

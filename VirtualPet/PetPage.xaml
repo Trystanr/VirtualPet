@@ -4,14 +4,34 @@
         <!-- Place new controls here -->
         
         <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Button Text="Quit"
+                HorizontalOptions="Start"
+                VerticalOptions="CenterAndExpand"
+                TextColor="#5A854D"
+                FontSize="18"
+                FontAttributes="Bold"
+                BackgroundColor="Transparent"
+                Clicked="MainQuit"/>
             <Image VerticalOptions="CenterAndExpand"
-               HorizontalOptions="FillAndExpand"
-               Source="AppLogo"
-               BackgroundColor="Transparent"
-               Aspect="AspectFit"></Image>
-             <Label Text="Pet View"
-                    HorizontalOptions="CenterAndExpand"
-                    TextColor="#FFF"></Label>
+                HorizontalOptions="FillAndExpand"
+                Source="AppLogo"
+                BackgroundColor="Transparent"
+                Aspect="AspectFit"></Image>
+            <Label Text="Pet View"
+                HorizontalOptions="CenterAndExpand"
+                TextColor="#FFF"></Label>
+            <Label Text="Hunger"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   x:Name="hungerLabel"></Label>
+            <Button Text="Feed"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                TextColor="#5A854D"
+                FontSize="18"
+                FontAttributes="Bold"
+                BackgroundColor="Transparent"
+                Clicked="FeedPet"/>
             </StackLayout>
     </StackLayout>
 </ContentPage>

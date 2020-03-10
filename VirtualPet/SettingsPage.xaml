@@ -4,6 +4,14 @@
         <!-- Place new controls here -->
         
         <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+            <Button Text="Save"
+                    HorizontalOptions="Start"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="#5A854D"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    BackgroundColor="Transparent"
+                    Clicked="SettingsQuit"/>
             <Image VerticalOptions="CenterAndExpand"
                HorizontalOptions="FillAndExpand"
                Source="AppLogo"
