@@ -22,11 +22,17 @@ namespace VirtualPet {
             updateUI();
 
             StartTimer();
+
+            
         }
 
         void updateUI() {
+
+            hungerProgress(Convert.ToDouble((pet.Hunger))/100);
+
             if (pet.Hunger != 300) {
                 hungerLabel.Text = Convert.ToString(pet.Hunger);
+                hungerStateLabel.Text = PetHungerStates.GetPetHungerState(PetHungerStates.GetStateFromHunger(pet.Hunger));
             }
         }
 
@@ -61,6 +67,10 @@ namespace VirtualPet {
                 }
                  
             });
+        }
+
+        async private void hungerProgress(double i) {
+            await hungerProgressBar.ProgressTo(i, 100, Easing.Linear);
         }
 
 

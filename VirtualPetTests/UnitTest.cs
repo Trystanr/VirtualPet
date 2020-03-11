@@ -15,5 +15,12 @@ namespace VirtualPetTests {
             Assert.AreEqual(PetHungerStates.GetPetHungerState("starving"), PetHungerState.starving);
         }
 
+        [TestMethod]
+        public void getHungerStateFromValue() {
+            int hungerValue = 15;
+            Assert.AreEqual(PetHungerStates.GetStateFromHunger(hungerValue), PetHungerState.starving);
+        }
+        
+
     }
 }

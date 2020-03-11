@@ -3,7 +3,14 @@
     <StackLayout  BackgroundColor="#b2f372">
         <!-- Place new controls here -->
         
-        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+        <FlexLayout Direction="Column"
+                    AlignItems="Stretch"
+                    JustifyContent="Center"
+                    FlexLayout.Grow="1"
+                    Padding="0,50,0,0"
+                    Margin="20"
+                    BackgroundColor="Transparent">
+
             <Button Text="Quit"
                 HorizontalOptions="Start"
                 VerticalOptions="CenterAndExpand"
@@ -17,13 +24,24 @@
                 Source="AppLogo"
                 BackgroundColor="Transparent"
                 Aspect="AspectFit"></Image>
-            <Label Text="Pet View"
-                HorizontalOptions="CenterAndExpand"
-                TextColor="#FFF"></Label>
+
             <Label Text="Hunger"
                    HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
                    VerticalOptions="CenterAndExpand"
                    x:Name="hungerLabel"></Label>
+            <Label Text="Hunger"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="CenterAndExpand"
+                   x:Name="hungerStateLabel"></Label>
+            <ProgressBar BackgroundColor="Transparent"
+                         ProgressColor="#265a43"
+                         Progress="0"
+                         ScaleY="10"
+                         Margin="{OnPlatform iOS='0,10,0,0', Default='0,20,0,0'}"
+                         
+                         x:Name="hungerProgressBar" InputTransparent="True"/>
             <Button Text="Feed"
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="CenterAndExpand"
@@ -32,6 +50,12 @@
                 FontAttributes="Bold"
                 BackgroundColor="Transparent"
                 Clicked="FeedPet"/>
-            </StackLayout>
+            <Image VerticalOptions="CenterAndExpand"
+                HorizontalOptions="FillAndExpand"
+                Source="AppLogo"
+                BackgroundColor="Transparent"
+                Aspect="AspectFit"
+                x:Name="foodButton"></Image>
+        </FlexLayout>
     </StackLayout>
 </ContentPage>

@@ -37,6 +37,18 @@ namespace VirtualPet.Objects {
             }
         }
 
+        public static PetHungerState GetStateFromHunger(int hungerValue) {
+            if (hungerValue < 20) {
+                return PetHungerState.starving;
+            } else if (hungerValue < 40) {
+                return PetHungerState.hungry;
+            } else if (hungerValue < 70) {
+                return PetHungerState.peckish;
+            } else {
+                return PetHungerState.full;
+            }
+        }
+
         public PetHungerStates() {
         }
     }
