@@ -22,17 +22,28 @@ namespace VirtualPet {
             updateUI();
 
             StartTimer();
-
             
         }
 
         void updateUI() {
 
             hungerProgress(Convert.ToDouble((pet.Hunger))/100);
+            thirstProgress(Convert.ToDouble((pet.Thirst)) / 100);
+            cureProgress(Convert.ToDouble((pet.Cure)) / 100);
 
             if (pet.Hunger != 300) {
-                hungerLabel.Text = Convert.ToString(pet.Hunger);
+                //hungerLabel.Text = Convert.ToString(pet.Hunger);
                 hungerStateLabel.Text = PetHungerStates.GetPetHungerState(PetHungerStates.GetStateFromHunger(pet.Hunger));
+            }
+
+            if (pet.Thirst != 300) {
+                //thirstLabel.Text = Convert.ToString(pet.Thirst);
+                thirstStateLabel.Text = PetThirstStates.GetPetThirstState(PetThirstStates.GetStateFromThirst(pet.Thirst));
+            }
+
+            if (pet.Cure != 300) {
+                //thirstLabel.Text = Convert.ToString(pet.Thirst);
+                cureStateLabel.Text = PetCureStates.GetPetCureState(PetCureStates.GetStateFromCure(pet.Cure));
             }
         }
 
@@ -50,13 +61,45 @@ namespace VirtualPet {
             updateUI();
         }
 
+        void DrinkPet(System.Object sender, System.EventArgs e) {
+            //ResetTimer();
+
+            pet.Drink();
+
+            updateUI();
+        }
+
+        void InjectPet(System.Object sender, System.EventArgs e) {
+            //ResetTimer();
+
+            pet.Inject();
+
+            updateUI();
+        }
+
         private void StartTimer() {
             
             isTimed = true;
 
             Device.StartTimer(TimeSpan.FromSeconds(1), () =>
             {
-                pet.Starve();
+               
+                Random generator = new Random();
+
+                int randomumber = generator.Next(0, 10);
+
+                if (randomumber < 2) {
+                    pet.Cough();
+                } else if (randomumber < 6) {
+                    pet.Starve();
+                } else if (randomumber < 8) {
+                    pet.Dehydrate();
+                } else {
+                    pet.Starve();
+                    pet.Dehydrate();
+                }
+
+
                 updateUI();
 
                 // return true to repeat counting, false to stop timer
@@ -71,6 +114,14 @@ namespace VirtualPet {
 
         async private void hungerProgress(double i) {
             await hungerProgressBar.ProgressTo(i, 100, Easing.Linear);
+        }
+
+        async private void thirstProgress(double i) {
+            await thirstProgressBar.ProgressTo(i, 100, Easing.Linear);
+        }
+
+        async private void cureProgress(double i) {
+            await cureProgressBar.ProgressTo(i, 100, Easing.Linear);
         }
 
 
