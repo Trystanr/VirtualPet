@@ -54,7 +54,6 @@ namespace VirtualPet {
         }
 
         void FeedPet(System.Object sender, System.EventArgs e) {
-            //ResetTimer();
 
             pet.Feed();
 
@@ -62,7 +61,6 @@ namespace VirtualPet {
         }
 
         void DrinkPet(System.Object sender, System.EventArgs e) {
-            //ResetTimer();
 
             pet.Drink();
 
@@ -102,7 +100,6 @@ namespace VirtualPet {
 
                 updateUI();
 
-                // return true to repeat counting, false to stop timer
                 if (isTimed) {
                     return true;
                 } else {

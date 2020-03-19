@@ -33,82 +33,84 @@
             <Image Source="BackgroundLab"
                    HorizontalOptions="FillAndExpand"
                    Aspect="AspectFit"
-                   FlexLayout.AlignSelf="Stretch" Margin="0,150,0,0"
+                   FlexLayout.AlignSelf="Stretch" Margin="0,0,0,0"
                    ></Image>
 
-            <StackLayout Orientation="Horizontal">
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
 
-            <Label Text="Hunger"
-                   HorizontalOptions="Center"
-                   HorizontalTextAlignment="Center"
-                   VerticalOptions="CenterAndExpand"
-                   x:Name="hungerStateLabel"
-                   WidthRequest="100"></Label>
-            <ImageButton Source="HamIcon" Clicked="FeedPet" Margin="0,21,0,0"/>
-            <ProgressBar BackgroundColor="Transparent"
-                         ProgressColor="#265a43"
-                         Progress="0"
-                         ScaleY="10"
-                         
-                         Margin="{OnPlatform iOS='0,10,0,0', Default='0,20,0,0'}"
-                         
-                         x:Name="hungerProgressBar"
-                         InputTransparent="True"
-                         HorizontalOptions="FillAndExpand"
-                         VerticalOptions="CenterAndExpand"/>
-            
-
-            </StackLayout>
-
-            <StackLayout Orientation="Horizontal">
-
-                <Label Text="Thirst"
-                   HorizontalOptions="Center"
-                       
-                   HorizontalTextAlignment="Center"
-                   VerticalOptions="CenterAndExpand"
-                   x:Name="thirstStateLabel"
-                   WidthRequest="100"></Label>
-
-            
-                <ImageButton Source="WaterIcon" Clicked="DrinkPet" Margin="0,21,0,0"/>
+                <Label Text="Hunger"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       VerticalOptions="CenterAndExpand"
+                       x:Name="hungerStateLabel"
+                       WidthRequest="100"></Label>
+                <ImageButton Source="HamIcon" Clicked="FeedPet" Margin="0,21,0,0"/>
                 <ProgressBar BackgroundColor="Transparent"
-                            ProgressColor="#265a43"
-                            Progress="0"
-                            ScaleY="10"
-                            Margin="{OnPlatform iOS='0,10,0,0', Default='0,20,0,0'}"
+                             ProgressColor="#265a43"
+                             Progress="0"
+                             ScaleY="10"
                          
-                            x:Name="thirstProgressBar"
-                            InputTransparent="True"
-                            HorizontalOptions="FillAndExpand"
-                            VerticalOptions="CenterAndExpand"/>
+                             Margin="{OnPlatform iOS='0,10,0,0', Default='0,20,0,0'}"
+                         
+                             x:Name="hungerProgressBar"
+                             InputTransparent="True"
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="CenterAndExpand"/>
+            
 
-            </StackLayout>
+                </StackLayout>
 
-            <StackLayout Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal">
 
-                <Label Text="Cure"
-                   HorizontalOptions="Center"
+                    <Label Text="Thirst"
+                       HorizontalOptions="Center"
                        
-                   HorizontalTextAlignment="Center"
-                   VerticalOptions="CenterAndExpand"
-                   x:Name="cureStateLabel"
-                   WidthRequest="100"></Label>
+                       HorizontalTextAlignment="Center"
+                       VerticalOptions="CenterAndExpand"
+                       x:Name="thirstStateLabel"
+                       WidthRequest="100"></Label>
 
             
-                <ImageButton Source="SyringeIcon" Clicked="InjectPet" Margin="0,21,0,0"/>
-                <ProgressBar BackgroundColor="Transparent"
-                            ProgressColor="#265a43"
-                            Progress="0"
-                            ScaleY="10"
-                            Margin="{OnPlatform iOS='0,10,0,0', Default='0,20,0,0'}"
+                    <ImageButton Source="WaterIcon" Clicked="DrinkPet" Margin="0,21,0,0"/>
+                    <ProgressBar BackgroundColor="Transparent"
+                                ProgressColor="#265a43"
+                                Progress="0"
+                                ScaleY="10"
+                                Margin="{OnPlatform iOS='0,10,0,0', Default='0,20,0,0'}"
                          
-                            x:Name="cureProgressBar"
-                            InputTransparent="True"
-                            HorizontalOptions="FillAndExpand"
-                            VerticalOptions="CenterAndExpand"/>
+                                x:Name="thirstProgressBar"
+                                InputTransparent="True"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="CenterAndExpand"/>
 
-            </StackLayout>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+
+                    <Label Text="Cure"
+                       HorizontalOptions="Center"
+                       
+                       HorizontalTextAlignment="Center"
+                       VerticalOptions="CenterAndExpand"
+                       x:Name="cureStateLabel"
+                       WidthRequest="100"></Label>
+
+            
+                    <ImageButton Source="SyringeIcon" Clicked="InjectPet" Margin="0,21,0,0"/>
+                    <ProgressBar BackgroundColor="Transparent"
+                                ProgressColor="#265a43"
+                                Progress="0"
+                                ScaleY="10"
+                                Margin="{OnPlatform iOS='0,10,0,0', Default='0,20,0,0'}"
+                         
+                                x:Name="cureProgressBar"
+                                InputTransparent="True"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="CenterAndExpand"/>
+
+                </StackLayout>
+                </StackLayout>
         </FlexLayout>
     </StackLayout>
 </ContentPage>
