@@ -45,6 +45,9 @@ namespace VirtualPet {
                 //thirstLabel.Text = Convert.ToString(pet.Thirst);
                 cureStateLabel.Text = PetCureStates.GetPetCureState(PetCureStates.GetStateFromCure(pet.Cure));
             }
+
+            petNameLabel.Text = pet.PetName;
+            Console.WriteLine(pet.PetName);
         }
 
         async void MainQuit(System.Object sender, System.EventArgs e) {

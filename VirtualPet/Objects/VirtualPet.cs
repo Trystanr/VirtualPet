@@ -13,6 +13,8 @@ namespace VirtualPet.Objects {
         const string PetCureStateKey = "PetCureStateKey";
         const string PetCureKey = "PetCure";
 
+        const string petNameKey = "petName";
+
         public PetHungerState CurrentHungerState {
             get {
                 // Assign a key if it doesn't exist
@@ -154,6 +156,22 @@ namespace VirtualPet.Objects {
                 Cure -= 2;
             } else {
                 Cure = 0;
+            }
+        }
+
+
+
+        public String PetName {
+            get {
+                if (App.Current.Properties.ContainsKey(petNameKey)) {
+                    return (string)App.Current.Properties[petNameKey];
+                } else {
+                    return "Jeffrey";
+                }
+            }
+
+            set {
+                App.Current.Properties[petNameKey] = value;
             }
         }
 

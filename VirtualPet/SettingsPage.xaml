@@ -17,6 +17,14 @@
                Source="AppLogo"
                BackgroundColor="Transparent"
                Aspect="AspectFit"></Image>
+            <Entry Text=""
+                   Placeholder="My Pet Name"
+                  
+                   PlaceholderColor="#ffffff"
+                   TextColor="#000000"
+                   HeightRequest="50"
+                   x:Name="nameEntry"
+                   IsTextPredictionEnabled="False"/>
             <Label Text="Settings"
                    HorizontalOptions="CenterAndExpand"></Label>
             </StackLayout>

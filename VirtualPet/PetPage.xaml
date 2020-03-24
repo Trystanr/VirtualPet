@@ -30,6 +30,13 @@
                 BackgroundColor="Transparent"
                 Aspect="AspectFit"></Image>
 
+             <Label Text="Name"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       VerticalOptions="CenterAndExpand"
+                       x:Name="petNameLabel"
+                       WidthRequest="100"></Label>
+
             <Image Source="BackgroundLab"
                    HorizontalOptions="FillAndExpand"
                    Aspect="AspectFit"
