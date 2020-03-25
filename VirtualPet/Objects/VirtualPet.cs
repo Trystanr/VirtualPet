@@ -15,6 +15,8 @@ namespace VirtualPet.Objects {
 
         const string petNameKey = "petName";
 
+        const string petDeathKey = "petDeath";
+
         public PetHungerState CurrentHungerState {
             get {
                 // Assign a key if it doesn't exist
@@ -175,8 +177,28 @@ namespace VirtualPet.Objects {
             }
         }
 
-        public VPet() {
+        public bool isDead {
+            get {
+                if (App.Current.Properties.ContainsKey(petDeathKey)) {
+                    //Console.WriteLine((int)App.Current.Properties[PetHungerKey]);
+                    return (bool)App.Current.Properties[petDeathKey];
+                } else {
+                    Console.WriteLine("No death property found?");
 
+                    return false;
+                }
+            }
+            set {
+                App.Current.Properties[petDeathKey] = value;
+            }
+        }
+
+        public void Die() {
+            isDead = true;
+        }
+
+        public VPet() {
+            
         }
 
 

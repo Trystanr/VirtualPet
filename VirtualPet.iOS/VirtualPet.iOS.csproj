@@ -122,6 +122,16 @@
     <ImageAsset Include="Assets.xcassets\SyringeIcon.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SyringeIcon.imageset\syringe_resized.png" />
     <ImageAsset Include="Assets.xcassets\WaterIcon.imageset\Waterbottle_resized.png" />
+    <ImageAsset Include="Assets.xcassets\Speech-Dots.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Speech-Water.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Speech-Dots.imageset\speech-bubble-dots-1.png" />
+    <ImageAsset Include="Assets.xcassets\Speech-Water.imageset\speech-bubble-water.png" />
+    <ImageAsset Include="Assets.xcassets\Speech-Virus.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Speech-Virus.imageset\speech-bubble-virus.png" />
+    <ImageAsset Include="Assets.xcassets\Speech-Food.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Speech-Skull.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Speech-Skull.imageset\speech-bubble-skull.png" />
+    <ImageAsset Include="Assets.xcassets\Speech-Food.imageset\speech-bubble-chicken.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -144,6 +154,11 @@
     <Folder Include="Assets.xcassets\WaterIcon.imageset\" />
     <Folder Include="Assets.xcassets\BackgroundLab.imageset\" />
     <Folder Include="Assets.xcassets\SyringeIcon.imageset\" />
+    <Folder Include="Assets.xcassets\Speech-Dots.imageset\" />
+    <Folder Include="Assets.xcassets\Speech-Water.imageset\" />
+    <Folder Include="Assets.xcassets\Speech-Virus.imageset\" />
+    <Folder Include="Assets.xcassets\Speech-Food.imageset\" />
+    <Folder Include="Assets.xcassets\Speech-Skull.imageset\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\VirtualPet\VirtualPet.projitems" Label="Shared" />

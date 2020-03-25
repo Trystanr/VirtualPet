@@ -19,9 +19,10 @@
                Aspect="AspectFit"></Image>
             <Entry Text=""
                    Placeholder="My Pet Name"
-                  
-                   PlaceholderColor="#ffffff"
-                   TextColor="#000000"
+                    BackgroundColor="Transparent"
+                   
+                   PlaceholderColor="#72BC66"
+                   TextColor="#fff"
                    HeightRequest="50"
                    x:Name="nameEntry"
                    IsTextPredictionEnabled="False"/>

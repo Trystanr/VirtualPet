@@ -14,7 +14,7 @@
                     Margin="0,0,0,0"
                     BackgroundColor="Transparent">
 
-            <Button Text="Quit"
+            <Button Text="Back to Menu"
                 HorizontalOptions="Start"
                 VerticalOptions="CenterAndExpand"
                 TextColor="#005b40"
@@ -24,26 +24,36 @@
                 Clicked="MainQuit"
                     FlexLayout.AlignSelf="Start"
                     Margin="20,0,0,0"/>
+
             <Image VerticalOptions="CenterAndExpand"
                 HorizontalOptions="FillAndExpand"
                 Source="AppLogo"
                 BackgroundColor="Transparent"
                 Aspect="AspectFit"></Image>
 
-             <Label Text="Name"
+             <Label Text=""
                        HorizontalOptions="Center"
                        HorizontalTextAlignment="Center"
                        VerticalOptions="CenterAndExpand"
-                       x:Name="petNameLabel"
-                       WidthRequest="100"></Label>
+                       x:Name="petNameLabel" Padding="0,30,0,0"
+                       ></Label>
 
+            
             <Image Source="BackgroundLab"
                    HorizontalOptions="FillAndExpand"
                    Aspect="AspectFit"
                    FlexLayout.AlignSelf="Stretch" Margin="0,0,0,0"
                    ></Image>
 
-            <StackLayout>
+            <Image Source="Speech-Dots"
+                   HorizontalOptions="FillAndExpand"
+                   Aspect="AspectFit"
+                   FlexLayout.AlignSelf="Stretch"
+                   Margin="-100,-200,0,0"
+                   x:Name="speechImage"
+                   ></Image>
+
+            <StackLayout Margin="0,120,0,0">
                 <StackLayout Orientation="Horizontal">
 
                 <Label Text="Hunger"

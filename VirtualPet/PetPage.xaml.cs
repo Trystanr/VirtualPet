@@ -26,28 +26,63 @@ namespace VirtualPet {
         }
 
         void updateUI() {
+            if (pet.Hunger == 0 && pet.Thirst == 0 && pet.Cure == 0) {
+                hungerStateLabel.Text = "RIP";
+                thirstStateLabel.Text = "RIP";
+                cureStateLabel.Text = "RIP";
 
-            hungerProgress(Convert.ToDouble((pet.Hunger))/100);
-            thirstProgress(Convert.ToDouble((pet.Thirst)) / 100);
-            cureProgress(Convert.ToDouble((pet.Cure)) / 100);
+                petNameLabel.Text = "Dead " + pet.PetName;
 
-            if (pet.Hunger != 300) {
-                //hungerLabel.Text = Convert.ToString(pet.Hunger);
-                hungerStateLabel.Text = PetHungerStates.GetPetHungerState(PetHungerStates.GetStateFromHunger(pet.Hunger));
+                hungerProgress(0);
+                thirstProgress(0);
+                cureProgress(0);
+            } else {
+
+                hungerProgress(Convert.ToDouble((pet.Hunger))/100);
+                thirstProgress(Convert.ToDouble((pet.Thirst)) / 100);
+                cureProgress(Convert.ToDouble((pet.Cure)) / 100);
+
+                if (pet.Hunger != 300) {
+                    //hungerLabel.Text = Convert.ToString(pet.Hunger);
+                    hungerStateLabel.Text = PetHungerStates.GetPetHungerState(PetHungerStates.GetStateFromHunger(pet.Hunger));
+                }
+
+            
+
+                if (pet.Thirst != 300) {
+                    //thirstLabel.Text = Convert.ToString(pet.Thirst);
+                    thirstStateLabel.Text = PetThirstStates.GetPetThirstState(PetThirstStates.GetStateFromThirst(pet.Thirst));
+                }
+
+            
+
+                if (pet.Cure != 300) {
+                    //thirstLabel.Text = Convert.ToString(pet.Thirst);
+                    cureStateLabel.Text = PetCureStates.GetPetCureState(PetCureStates.GetStateFromCure(pet.Cure));
+                }
+
+                if (pet.Hunger < 20) {
+                    speechImage.Source = "Speech-Food";
+                }
+                else if (pet.Thirst < 20) {
+                    speechImage.Source = "Speech-Water";
+                }
+                else if (pet.Cure < 20) {
+                    speechImage.Source = "Speech-Virus";
+                } else {
+                    speechImage.Source = "Speech-Dots";
+                }
+
+            
+
+                if (pet.PetName == "") {
+                    petNameLabel.Text = "Jeffrey";
+                } else {
+                    petNameLabel.Text = pet.PetName;
+                }
+
             }
 
-            if (pet.Thirst != 300) {
-                //thirstLabel.Text = Convert.ToString(pet.Thirst);
-                thirstStateLabel.Text = PetThirstStates.GetPetThirstState(PetThirstStates.GetStateFromThirst(pet.Thirst));
-            }
-
-            if (pet.Cure != 300) {
-                //thirstLabel.Text = Convert.ToString(pet.Thirst);
-                cureStateLabel.Text = PetCureStates.GetPetCureState(PetCureStates.GetStateFromCure(pet.Cure));
-            }
-
-            petNameLabel.Text = pet.PetName;
-            Console.WriteLine(pet.PetName);
         }
 
         async void MainQuit(System.Object sender, System.EventArgs e) {
@@ -58,24 +93,33 @@ namespace VirtualPet {
 
         void FeedPet(System.Object sender, System.EventArgs e) {
 
-            pet.Feed();
+            if (pet.isDead == false) {
+                pet.Feed();
 
-            updateUI();
+                updateUI();
+            }
+            
         }
 
         void DrinkPet(System.Object sender, System.EventArgs e) {
 
-            pet.Drink();
+            if (pet.isDead == false) {
 
-            updateUI();
+                pet.Drink();
+
+                updateUI();
+            }
         }
 
         void InjectPet(System.Object sender, System.EventArgs e) {
             //ResetTimer();
 
-            pet.Inject();
+            if (pet.isDead == false) {
 
-            updateUI();
+                pet.Inject();
+
+                updateUI();
+            }
         }
 
         private void StartTimer() {
