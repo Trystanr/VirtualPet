@@ -40,7 +40,9 @@ namespace VirtualPet {
                 //thirstProgress(0);
                 //cureProgress(0);
 
-                speechImage.Source = "Speech-Skull";
+                speechImage.Source = "Speech_Skull";
+
+                speechPop();
             } else {
 
                 hungerProgress(Convert.ToDouble((pet.Hunger))/100);
@@ -66,28 +68,53 @@ namespace VirtualPet {
                     cureStateLabel.Text = PetCureStates.GetPetCureState(PetCureStates.GetStateFromCure(pet.Cure));
                 }
 
+
                 if (pet.Hunger < 40 && pet.Thirst < 40 && pet.Cure < 40) {
-                    speechImage.Source = "Speech-Food-Water-Virus";
+                    if ((speechImage.Source as FileImageSource).File != "Speech_Food_Water_Virus") {
+                        speechImage.Source = "Speech_Food_Water_Virus";
+                        speechPop();
+                    } 
                 }
                 else if (pet.Hunger < 40 && pet.Thirst < 40) {
-                    speechImage.Source = "Speech-Food-Water";
+                    if ((speechImage.Source as FileImageSource).File != "Speech_Food_Water") {
+                        speechImage.Source = "Speech_Food_Water";
+                        speechPop();
+                    }
                 }
                 else if (pet.Hunger < 40 && pet.Cure < 40) {
-                    speechImage.Source = "Speech-Food-Virus";
+                    if ((speechImage.Source as FileImageSource).File != "Speech_Food_Virus") {
+                        speechImage.Source = "Speech_Food_Virus";
+                        speechPop();
+                    }
                 }
                 else if (pet.Thirst < 40 && pet.Cure < 40) {
-                    speechImage.Source = "Speech-Water-Virus";
+                    if ((speechImage.Source as FileImageSource).File != "Speech_Water_Virus") {
+                        speechPop();
+                        speechImage.Source = "Speech_Water_Virus";
+                    }
                 }
                 else if (pet.Hunger < 40) {
-                    speechImage.Source = "Speech-Food";
+                    if ((speechImage.Source as FileImageSource).File != "Speech_Food") {
+                        speechPop();
+                        speechImage.Source = "Speech_Food";
+                    }
                 }
                 else if (pet.Thirst < 40) {
-                    speechImage.Source = "Speech-Water";
+                    if ((speechImage.Source as FileImageSource).File != "Speech_Water") {
+                        speechPop();
+                        speechImage.Source = "Speech_Water";
+                    }
                 }
                 else if (pet.Cure < 40) {
-                    speechImage.Source = "Speech-Virus";
+                    if ((speechImage.Source as FileImageSource).File != "Speech_Virus") {
+                        speechPop();
+                        speechImage.Source = "Speech_Virus";
+                    }
                 } else {
-                    speechImage.Source = "Speech-Dots";
+                    if ((speechImage.Source as FileImageSource).File != "Speech_Dots") {
+                        speechPop();
+                        speechImage.Source = "Speech_Dots";
+                    }
                 }
 
             
@@ -100,6 +127,12 @@ namespace VirtualPet {
 
             }
 
+        }
+
+        async void speechPop() {
+            await speechImage.ScaleTo(1.2, 100);
+            await speechImage.ScaleTo(0.8, 100);
+            await speechImage.ScaleTo(1, 100);
         }
 
         async void MainQuit(System.Object sender, System.EventArgs e) {
@@ -202,6 +235,20 @@ namespace VirtualPet {
             await cureProgressBar.ProgressTo(i, 100, Easing.Linear);
         }
 
+        void ButtonHunger(System.Object sender, System.EventArgs e) {
+            pet.Starve();
+            updateUI();
+        }
+
+        void ButtonThirst(System.Object sender, System.EventArgs e) {
+            pet.Dehydrate();
+            updateUI();
+        }
+
+        void ButtonSick(System.Object sender, System.EventArgs e) {
+            pet.Cough();
+            updateUI();
+        }
 
     }
 }

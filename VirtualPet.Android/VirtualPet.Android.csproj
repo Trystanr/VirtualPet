@@ -93,39 +93,39 @@
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\Speech-Dots.png">
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Speech_Dots.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\Speech-Food-Virus.png">
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Speech_Food_Virus.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\Speech-Food-Water-Virus.png">
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Speech_Food_Water_Virus.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\Speech-Food-Water.png">
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Speech_Food_Water.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\Speech-Food.png">
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Speech_Food.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\Speech-Skull.png">
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Speech_Skull.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\Speech-Virus.png">
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Speech_Virus.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\Speech-Water-Virus.png">
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Speech_Water_Virus.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable-xxxhdpi\Speech-Water.png">
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Speech_Water.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>

@@ -122,24 +122,24 @@
     <ImageAsset Include="Assets.xcassets\SyringeIcon.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\SyringeIcon.imageset\syringe_resized.png" />
     <ImageAsset Include="Assets.xcassets\WaterIcon.imageset\Waterbottle_resized.png" />
-    <ImageAsset Include="Assets.xcassets\Speech-Dots.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Speech-Water.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Speech-Dots.imageset\speech-bubble-dots-1.png" />
-    <ImageAsset Include="Assets.xcassets\Speech-Water.imageset\speech-bubble-water.png" />
-    <ImageAsset Include="Assets.xcassets\Speech-Virus.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Speech-Virus.imageset\speech-bubble-virus.png" />
-    <ImageAsset Include="Assets.xcassets\Speech-Food.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Speech-Skull.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Speech-Skull.imageset\speech-bubble-skull.png" />
-    <ImageAsset Include="Assets.xcassets\Speech-Food.imageset\speech-bubble-chicken.png" />
-    <ImageAsset Include="Assets.xcassets\Speech-Food-Water-Virus.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Speech-Food-Water.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Speech-Food-Virus.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Speech-Water-Virus.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Speech-Food-Water-Virus.imageset\speech-bubble-checkenwatervirus.png" />
-    <ImageAsset Include="Assets.xcassets\Speech-Food-Water.imageset\speech-bubble-checkenwater.png" />
-    <ImageAsset Include="Assets.xcassets\Speech-Food-Virus.imageset\speech-bubble-checkenvirus.png" />
-    <ImageAsset Include="Assets.xcassets\Speech-Water-Virus.imageset\speech-bubble-watervirus.png" />
+    <ImageAsset Include="Assets.xcassets\Speech_Dots.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Speech_Dots.imageset\speech-bubble-dots-1.png" />
+    <ImageAsset Include="Assets.xcassets\Speech_Food_Virus.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Speech_Food_Virus.imageset\speech-bubble-checkenvirus.png" />
+    <ImageAsset Include="Assets.xcassets\Speech_Food_Water_Virus.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Speech_Food_Water_Virus.imageset\speech-bubble-checkenwatervirus.png" />
+    <ImageAsset Include="Assets.xcassets\Speech_Food_Water.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Speech_Food_Water.imageset\speech-bubble-checkenwater.png" />
+    <ImageAsset Include="Assets.xcassets\Speech_Food.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Speech_Food.imageset\speech-bubble-chicken.png" />
+    <ImageAsset Include="Assets.xcassets\Speech_Skull.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Speech_Skull.imageset\speech-bubble-skull.png" />
+    <ImageAsset Include="Assets.xcassets\Speech_Virus.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Speech_Virus.imageset\speech-bubble-virus.png" />
+    <ImageAsset Include="Assets.xcassets\Speech_Water_Virus.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Speech_Water_Virus.imageset\speech-bubble-watervirus.png" />
+    <ImageAsset Include="Assets.xcassets\Speech_Water.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Speech_Water.imageset\speech-bubble-water.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -162,15 +162,15 @@
     <Folder Include="Assets.xcassets\WaterIcon.imageset\" />
     <Folder Include="Assets.xcassets\BackgroundLab.imageset\" />
     <Folder Include="Assets.xcassets\SyringeIcon.imageset\" />
-    <Folder Include="Assets.xcassets\Speech-Dots.imageset\" />
-    <Folder Include="Assets.xcassets\Speech-Water.imageset\" />
-    <Folder Include="Assets.xcassets\Speech-Virus.imageset\" />
-    <Folder Include="Assets.xcassets\Speech-Food.imageset\" />
-    <Folder Include="Assets.xcassets\Speech-Skull.imageset\" />
-    <Folder Include="Assets.xcassets\Speech-Food-Water-Virus.imageset\" />
-    <Folder Include="Assets.xcassets\Speech-Food-Water.imageset\" />
-    <Folder Include="Assets.xcassets\Speech-Food-Virus.imageset\" />
-    <Folder Include="Assets.xcassets\Speech-Water-Virus.imageset\" />
+    <Folder Include="Assets.xcassets\Speech_Dots.imageset\" />
+    <Folder Include="Assets.xcassets\Speech_Food_Virus.imageset\" />
+    <Folder Include="Assets.xcassets\Speech_Food_Water_Virus.imageset\" />
+    <Folder Include="Assets.xcassets\Speech_Food_Water.imageset\" />
+    <Folder Include="Assets.xcassets\Speech_Food.imageset\" />
+    <Folder Include="Assets.xcassets\Speech_Skull.imageset\" />
+    <Folder Include="Assets.xcassets\Speech_Virus.imageset\" />
+    <Folder Include="Assets.xcassets\Speech_Water_Virus.imageset\" />
+    <Folder Include="Assets.xcassets\Speech_Water.imageset\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\VirtualPet\VirtualPet.projitems" Label="Shared" />

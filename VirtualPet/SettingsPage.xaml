@@ -1,33 +1,41 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="VirtualPet.SettingsPage">
-    <StackLayout  BackgroundColor="#265a43">
         <!-- Place new controls here -->
         
-        <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-            <Button Text="Save"
-                    HorizontalOptions="Start"
-                    VerticalOptions="CenterAndExpand"
-                    TextColor="#5A854D"
-                    FontSize="18"
-                    FontAttributes="Bold"
+        <FlexLayout Margin="0,0,0,0"
+                    Padding="40,40,40,40"
+                    AlignContent="Center"
+                    JustifyContent="Start"
+                    Direction="Column"
+                    BackgroundColor="#265a43">
+            <Label Text="Settings"
+                   HorizontalOptions="CenterAndExpand"
+                   HorizontalTextAlignment="Center"
+                   FontSize="Large"
+                   TextColor="#ffffff" Margin="0,0,0,50"
+
+                   ></Label>
+            <Image  VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Source="AppLogo"
                     BackgroundColor="Transparent"
-                    Clicked="SettingsQuit"/>
-            <Image VerticalOptions="CenterAndExpand"
-               HorizontalOptions="FillAndExpand"
-               Source="AppLogo"
-               BackgroundColor="Transparent"
-               Aspect="AspectFit"></Image>
+                    Aspect="AspectFit"></Image>
             <Entry Text=""
                    Placeholder="My Pet Name"
-                    BackgroundColor="Transparent"
-                   
+                   BackgroundColor="Transparent"
                    PlaceholderColor="#72BC66"
                    TextColor="#fff"
                    HeightRequest="50"
                    x:Name="nameEntry"
-                   IsTextPredictionEnabled="False"/>
-            <Label Text="Settings"
-                   HorizontalOptions="CenterAndExpand"></Label>
-            </StackLayout>
-    </StackLayout>
+                   IsTextPredictionEnabled="False" Keyboard="Plain"
+                   />
+            <Button Text="Save"
+                    HorizontalOptions="Start"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="#5A854D"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    BackgroundColor="Transparent"
+                    Clicked="SettingsQuit"/>
+        </FlexLayout>
 </ContentPage>

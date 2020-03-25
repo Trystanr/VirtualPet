@@ -11,15 +11,20 @@ namespace VirtualPet {
 
         public SettingsPage() {
             InitializeComponent();
+
+            nameEntry.Text = pet.PetName;
         }
 
         async void SettingsQuit(System.Object sender, System.EventArgs e) {
 
-            string newPetName = nameEntry.Text;
+            if (nameEntry.Text != "") {
+                string newPetName = nameEntry.Text;
 
-            pet.PetName = newPetName;
+                pet.PetName = newPetName;
 
-            await Navigation.PopModalAsync();
+                await Navigation.PopModalAsync();
+            }
+            
 
         }
     }
