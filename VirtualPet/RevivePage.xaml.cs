@@ -15,13 +15,13 @@ namespace VirtualPet {
             deathName.Text = pet.PetName + " has died.";
 
             if (pet.Hunger == 0) {
-                labelCOD.Text = "He died of hunger.";
+                labelCOD.Text = "They died of hunger.";
                 speechImage.Source = "Speech_Food";
             } else if (pet.Thirst == 0) {
-                labelCOD.Text = "He died of thirst.";
+                labelCOD.Text = "They died of thirst.";
                 speechImage.Source = "Speech_Water";
             } else if (pet.Cure == 0) {
-                labelCOD.Text = "He died of disease.";
+                labelCOD.Text = "They died of disease.";
                 speechImage.Source = "Speech_Virus";
             }
 

@@ -16,9 +16,10 @@ namespace VirtualPet
         public MainPage()
         {
             InitializeComponent();
+            //BarTextColor = "#000";
         }
 
-        async void Button_Clicked(System.Object sender, System.EventArgs e) {
+        async void ButtonPlay(System.Object sender, System.EventArgs e) {
             var modalPage = new PetPage();
 
             modalPage.Disappearing += (sender2, e2) => {
@@ -29,7 +30,7 @@ namespace VirtualPet
             Console.WriteLine("The modal page is now on screen, hit back button");
         }
 
-        async void Button_Clicked_1(System.Object sender, System.EventArgs e) {
+        async void ButtonSettings(System.Object sender, System.EventArgs e) {
             var modalPage = new SettingsPage();
 
             modalPage.Disappearing += (sender2, e2) => {

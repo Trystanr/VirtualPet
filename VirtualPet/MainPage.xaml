@@ -17,7 +17,7 @@
                 BorderWidth="10"
                 BorderColor="#265a43"
                 BackgroundColor="#b2f372"
-                Clicked="Button_Clicked"
+                Clicked="ButtonPlay"
                 Padding="20,8"
                 FontAttributes="Bold"
                 CornerRadius="0"
@@ -30,7 +30,7 @@
                 BorderWidth="10"
                 BorderColor="#265a43"
                 BackgroundColor="#b2f372"
-                Clicked="Button_Clicked_1"
+                Clicked="ButtonSettings"
                 Padding="20,8"
                 FontAttributes="Bold"
                 CornerRadius="0"/>
