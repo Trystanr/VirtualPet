@@ -197,6 +197,16 @@ namespace VirtualPet.Objects {
             isDead = true;
         }
 
+        public void Revive() {
+            isDead = false;
+
+            Random generator = new Random();
+
+            Hunger = generator.Next(70, 100);
+            Thirst = generator.Next(70, 100);
+            Cure = generator.Next(70, 100);
+        }
+
         public VPet() {
             
         }

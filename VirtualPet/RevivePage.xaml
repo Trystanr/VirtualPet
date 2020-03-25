@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VirtualPet.RevivePage">
+    <ContentPage.Content>
+         <StackLayout  BackgroundColor="#b2f372" Margin="0" Padding="0">
+        <Label Text="Your boy died"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       VerticalOptions="CenterAndExpand"></Label>
+             <Label Text="He died of "
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       VerticalOptions="CenterAndExpand"
+                    x:Name="labelCOD"></Label>
+        <Button Text="Revive Him!"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    TextColor="#5A854D"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    BackgroundColor="Transparent"
+                    Clicked="RevivePet"/>
+         </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

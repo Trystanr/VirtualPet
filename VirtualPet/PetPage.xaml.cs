@@ -26,16 +26,21 @@ namespace VirtualPet {
         }
 
         void updateUI() {
-            if (pet.Hunger == 0 && pet.Thirst == 0 && pet.Cure == 0) {
+            if (pet.Hunger == 0 || pet.Thirst == 0 || pet.Cure == 0) {
+
+                pet.Die();
+
                 hungerStateLabel.Text = "RIP";
                 thirstStateLabel.Text = "RIP";
                 cureStateLabel.Text = "RIP";
 
                 petNameLabel.Text = "Dead " + pet.PetName;
 
-                hungerProgress(0);
-                thirstProgress(0);
-                cureProgress(0);
+                //hungerProgress(0);
+                //thirstProgress(0);
+                //cureProgress(0);
+
+                speechImage.Source = "Speech-Skull";
             } else {
 
                 hungerProgress(Convert.ToDouble((pet.Hunger))/100);
@@ -122,6 +127,19 @@ namespace VirtualPet {
             }
         }
 
+        async private void RevivePet() {
+            var modalPage = new RevivePage();
+
+            modalPage.Disappearing += (sender2, e2) => {
+                Console.WriteLine("The modal page is dismissed, do something now");
+                updateUI();
+
+                StartTimer();
+            };
+
+            await Navigation.PushModalAsync(modalPage);
+        }
+
         private void StartTimer() {
             
             isTimed = true;
@@ -144,8 +162,12 @@ namespace VirtualPet {
                     pet.Dehydrate();
                 }
 
-
-                updateUI();
+                if (pet.isDead == false) {
+                    updateUI();
+                } else {
+                    RevivePet();
+                    isTimed = false;
+                }
 
                 if (isTimed) {
                     return true;
