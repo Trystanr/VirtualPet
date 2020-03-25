@@ -12,18 +12,35 @@ namespace VirtualPet {
         public RevivePage() {
             InitializeComponent();
 
+            deathName.Text = pet.PetName + " has died.";
+
             if (pet.Hunger == 0) {
                 labelCOD.Text = "He died of hunger.";
+                speechImage.Source = "Speech-Food";
             } else if (pet.Thirst == 0) {
                 labelCOD.Text = "He died of thirst.";
+                speechImage.Source = "Speech-Water";
             } else if (pet.Cure == 0) {
                 labelCOD.Text = "He died of disease.";
+                speechImage.Source = "Speech-Virus";
             }
+
+
         }
 
         async void RevivePet(System.Object sender, System.EventArgs e) {
-            pet.Revive();
-            await Navigation.PopModalAsync();
+
+            if (nameEntry.Text != "") {
+
+                string newPetName = nameEntry.Text;
+                pet.PetName = newPetName;
+
+                pet.Revive();
+                await Navigation.PopModalAsync();
+            } else {
+                labelErr.Text = "Please enter a name for your new patient.";
+            }
+            
         }
     }
 }

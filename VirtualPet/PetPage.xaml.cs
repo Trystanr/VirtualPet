@@ -66,13 +66,25 @@ namespace VirtualPet {
                     cureStateLabel.Text = PetCureStates.GetPetCureState(PetCureStates.GetStateFromCure(pet.Cure));
                 }
 
-                if (pet.Hunger < 20) {
+                if (pet.Hunger < 40 && pet.Thirst < 40 && pet.Cure < 40) {
+                    speechImage.Source = "Speech-Food-Water-Virus";
+                }
+                else if (pet.Hunger < 40 && pet.Thirst < 40) {
+                    speechImage.Source = "Speech-Food-Water";
+                }
+                else if (pet.Hunger < 40 && pet.Cure < 40) {
+                    speechImage.Source = "Speech-Food-Virus";
+                }
+                else if (pet.Thirst < 40 && pet.Cure < 40) {
+                    speechImage.Source = "Speech-Water-Virus";
+                }
+                else if (pet.Hunger < 40) {
                     speechImage.Source = "Speech-Food";
                 }
-                else if (pet.Thirst < 20) {
+                else if (pet.Thirst < 40) {
                     speechImage.Source = "Speech-Water";
                 }
-                else if (pet.Cure < 20) {
+                else if (pet.Cure < 40) {
                     speechImage.Source = "Speech-Virus";
                 } else {
                     speechImage.Source = "Speech-Dots";

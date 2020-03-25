@@ -132,6 +132,14 @@
     <ImageAsset Include="Assets.xcassets\Speech-Skull.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Speech-Skull.imageset\speech-bubble-skull.png" />
     <ImageAsset Include="Assets.xcassets\Speech-Food.imageset\speech-bubble-chicken.png" />
+    <ImageAsset Include="Assets.xcassets\Speech-Food-Water-Virus.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Speech-Food-Water.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Speech-Food-Virus.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Speech-Water-Virus.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Speech-Food-Water-Virus.imageset\speech-bubble-checkenwatervirus.png" />
+    <ImageAsset Include="Assets.xcassets\Speech-Food-Water.imageset\speech-bubble-checkenwater.png" />
+    <ImageAsset Include="Assets.xcassets\Speech-Food-Virus.imageset\speech-bubble-checkenvirus.png" />
+    <ImageAsset Include="Assets.xcassets\Speech-Water-Virus.imageset\speech-bubble-watervirus.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -159,6 +167,10 @@
     <Folder Include="Assets.xcassets\Speech-Virus.imageset\" />
     <Folder Include="Assets.xcassets\Speech-Food.imageset\" />
     <Folder Include="Assets.xcassets\Speech-Skull.imageset\" />
+    <Folder Include="Assets.xcassets\Speech-Food-Water-Virus.imageset\" />
+    <Folder Include="Assets.xcassets\Speech-Food-Water.imageset\" />
+    <Folder Include="Assets.xcassets\Speech-Food-Virus.imageset\" />
+    <Folder Include="Assets.xcassets\Speech-Water-Virus.imageset\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\VirtualPet\VirtualPet.projitems" Label="Shared" />

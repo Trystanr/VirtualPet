@@ -2,18 +2,33 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VirtualPet.RevivePage">
-    <ContentPage.Content>
-         <StackLayout  BackgroundColor="#b2f372" Margin="0" Padding="0">
-        <Label Text="Your boy died"
+    <ContentPage.Content BackgroundColor="#b2f372">
+         <FlexLayout  BackgroundColor="#b2f372" Margin="0,0,0,0" Padding="40,40,40,40" AlignContent="Center" JustifyContent="Center" Direction="Column" >
+            <Label Text="Your boy died"
                        HorizontalOptions="Center"
                        HorizontalTextAlignment="Center"
-                       VerticalOptions="CenterAndExpand"></Label>
-             <Label Text="He died of "
+                       VerticalOptions="CenterAndExpand"
+                  x:Name="deathName"></Label>
+            <Label Text="He died of "
                        HorizontalOptions="Center"
                        HorizontalTextAlignment="Center"
                        VerticalOptions="CenterAndExpand"
                     x:Name="labelCOD"></Label>
-        <Button Text="Revive Him!"
+            <Image Source="Speech-Dots"
+                   HorizontalOptions="FillAndExpand"
+                   Aspect="AspectFit"
+                   x:Name="speechImage"
+                   ></Image>
+            <Entry Text=""
+                   Placeholder="Patient Name"
+                   BackgroundColor="Transparent"
+                   PlaceholderColor="#72BC66"
+                   TextColor="#000000"
+                   HeightRequest="50"
+                   x:Name="nameEntry"
+                   IsTextPredictionEnabled="False"
+                   Margin="0,40,0,0"/>
+            <Button Text="New Patient"
                     HorizontalOptions="Center"
                     VerticalOptions="CenterAndExpand"
                     TextColor="#5A854D"
@@ -21,6 +36,11 @@
                     FontAttributes="Bold"
                     BackgroundColor="Transparent"
                     Clicked="RevivePet"/>
-         </StackLayout>
+             <Label Text=""
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       VerticalOptions="CenterAndExpand"
+                    x:Name="labelErr"></Label>
+         </FlexLayout>
     </ContentPage.Content>
 </ContentPage>

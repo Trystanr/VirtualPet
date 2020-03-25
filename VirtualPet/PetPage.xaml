@@ -25,11 +25,6 @@
                     FlexLayout.AlignSelf="Start"
                     Margin="20,0,0,0"/>
 
-            <Image VerticalOptions="CenterAndExpand"
-                HorizontalOptions="FillAndExpand"
-                Source="AppLogo"
-                BackgroundColor="Transparent"
-                Aspect="AspectFit"></Image>
 
              <Label Text=""
                        HorizontalOptions="Center"
