@@ -55,9 +55,17 @@
                    x:Name="speechImage"
                    ></Image>
 
+            <Image Source="Character"
+                   HorizontalOptions="FillAndExpand"
+                   Aspect="AspectFit"
+                   FlexLayout.AlignSelf="Stretch"
+                   Margin="{OnPlatform iOS='-200,3,0,0', Default='-100,-150,0,0'}"
+                   BackgroundColor="Transparent"
+                   ></Image>
+
             
 
-            <StackLayout Margin="0,120,20,0">
+,20,0">
                 <StackLayout Orientation="Horizontal">
 
                     <Label Text="Hunger"
