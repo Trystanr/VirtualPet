@@ -5,34 +5,67 @@
     <ContentPage.Content BackgroundColor="#b2f372">
          <FlexLayout  BackgroundColor="#b2f372"
                       Margin="0,0,0,0"
-                      Padding="40,40,40,40"
-                      AlignContent="Center"
-                      JustifyContent="Center"
+                      Padding="40,200,40,40"
+                      AlignContent="Start"
+                      JustifyContent="Start"
                       Direction="Column" >
             <Label Text="Your boy died"
-                       HorizontalOptions="Center"
-                       HorizontalTextAlignment="Center"
-                       VerticalOptions="CenterAndExpand"
-                  x:Name="deathName"></Label>
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="CenterAndExpand"
+                   x:Name="deathName"
+                   FontFamily="Silkscreen-bold"
+                   TextColor="#005b40"></Label>
             <Label Text="He died of "
-                       HorizontalOptions="Center"
-                       HorizontalTextAlignment="Center"
-                       VerticalOptions="CenterAndExpand"
-                    x:Name="labelCOD"></Label>
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="CenterAndExpand"
+                   x:Name="labelCOD"
+                   FontFamily="Silkscreen"
+                   TextColor="#005b40"></Label>
             <Image Source="Speech_Dots"
                    HorizontalOptions="FillAndExpand"
                    Aspect="AspectFit"
                    x:Name="speechImage"
+                   Margin="0,30,0,-60"
                    ></Image>
+             <Image Source="Character_Man_Dead"
+                   HorizontalOptions="FillAndExpand"
+                   BackgroundColor="Transparent"
+                   x:Name="charImage"
+                   ></Image>
+
+             <Label Text="Here's your chance at"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="CenterAndExpand"
+
+                   FontFamily="Silkscreen"
+                   Margin="0,40,0,0"
+                   TextColor="#005b40"></Label>
+             <Label Text=" redemption. And make sure"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="CenterAndExpand"
+                   FontFamily="Silkscreen"
+                   TextColor="#005b40"></Label>
+             <Label Text="you don't kill this one."
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="CenterAndExpand"
+                   FontFamily="Silkscreen"
+                   TextColor="#005b40"></Label>
+
             <Entry Text=""
                    Placeholder="Patient Name"
                    BackgroundColor="Transparent"
                    PlaceholderColor="#72BC66"
-                   TextColor="#000000"
+                   TextColor="#255942"
                    HeightRequest="50"
                    x:Name="nameEntry"
                    IsTextPredictionEnabled="False"
-                   Margin="0,40,0,0" />
+                   Margin="0,20,0,0"
+                   FontFamily="Silkscreen-bold"/>
             <Button Text="New Patient"
                     HorizontalOptions="Center"
                     VerticalOptions="CenterAndExpand"
@@ -40,12 +73,15 @@
                     FontSize="18"
                     FontAttributes="Bold"
                     BackgroundColor="Transparent"
-                    Clicked="RevivePet"/>
+                    Clicked="RevivePet"
+                    FontFamily="Silkscreen"/>
              <Label Text=""
                        HorizontalOptions="Center"
                        HorizontalTextAlignment="Center"
                        VerticalOptions="CenterAndExpand"
-                    x:Name="labelErr"></Label>
+                    x:Name="labelErr"
+                    TextColor="#005b40"
+                    FontFamily="Silkscreen"></Label>
          </FlexLayout>
     </ContentPage.Content>
 </ContentPage>

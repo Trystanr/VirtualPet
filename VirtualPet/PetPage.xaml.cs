@@ -22,7 +22,8 @@ namespace VirtualPet {
             updateUI();
 
             StartTimer();
-            
+
+            charImage.Source = "Character_" + pet.PetSkin;
         }
 
         void updateUI() {
@@ -41,6 +42,7 @@ namespace VirtualPet {
                 //cureProgress(0);
 
                 speechImage.Source = "Speech_Skull";
+                charImage.Source = "Character_" + pet.PetSkin + "_Dead";
 
                 speechPop();
             } else {
@@ -177,6 +179,8 @@ namespace VirtualPet {
 
             modalPage.Disappearing += (sender2, e2) => {
                 Console.WriteLine("The modal page is dismissed, do something now");
+                charImage.Source = "Character_" + pet.PetSkin;
+
                 updateUI();
 
                 StartTimer();

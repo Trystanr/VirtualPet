@@ -34,5 +34,12 @@
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Silkscreen</string>
+		<string>Silkscreen-bold</string>
+	</array>
+	<key>CFBundleShortVersionString</key>
+	<string>0.76</string>
 </dict>
 </plist>

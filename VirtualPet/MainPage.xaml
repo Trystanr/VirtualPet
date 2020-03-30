@@ -19,9 +19,9 @@
                 BackgroundColor="#b2f372"
                 Clicked="ButtonPlay"
                 Padding="20,8"
-                FontAttributes="Bold"
                 CornerRadius="0"
-                Margin="0,100,0,0"/>
+                Margin="0,100,0,0"
+                FontFamily="Silkscreen-bold"/>
             <Button Text="Options"
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="CenterAndExpand"
@@ -32,7 +32,7 @@
                 BackgroundColor="#b2f372"
                 Clicked="ButtonSettings"
                 Padding="20,8"
-                FontAttributes="Bold"
+                FontFamily="Silkscreen-bold"
                 CornerRadius="0"/>
             </StackLayout>
     </StackLayout>

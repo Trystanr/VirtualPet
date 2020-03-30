@@ -15,6 +15,8 @@ namespace VirtualPet.Objects {
 
         const string petNameKey = "petName";
 
+        const string petSkinKey = "petSkin";
+
         const string petDeathKey = "petDeath";
 
         public PetHungerState CurrentHungerState {
@@ -174,6 +176,20 @@ namespace VirtualPet.Objects {
 
             set {
                 App.Current.Properties[petNameKey] = value;
+            }
+        }
+
+        public String PetSkin {
+            get {
+                if (App.Current.Properties.ContainsKey(petSkinKey)) {
+                    return (string)App.Current.Properties[petSkinKey];
+                } else {
+                    return "Man";
+                }
+            }
+
+            set {
+                App.Current.Properties[petSkinKey] = value;
             }
         }
 

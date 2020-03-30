@@ -138,10 +138,12 @@
     <ImageAsset Include="Assets.xcassets\Speech_Water_Virus.imageset\speech-bubble-watervirus.png" />
     <ImageAsset Include="Assets.xcassets\Speech_Water.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Speech_Water.imageset\speech-bubble-water.png" />
-    <ImageAsset Include="Assets.xcassets\Character.imageset\Contents.json" />
-    <ImageAsset Include="Assets.xcassets\Character.imageset\Character_Man-1.png" />
     <ImageAsset Include="Assets.xcassets\HamIcon.imageset\NewHam.png" />
     <ImageAsset Include="Assets.xcassets\BackgroundLab.imageset\Background.png" />
+    <ImageAsset Include="Assets.xcassets\Character_Man.imageset\Character_Man-1.png" />
+    <ImageAsset Include="Assets.xcassets\Character_Man.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Character_Man_Dead.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Character_Man_Dead.imageset\Character_Man_Dead.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -152,8 +154,8 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.908675" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.2" />
     <PackageReference Include="Xam.Plugins.Forms.ProgressRing">
       <Version>0.1.2</Version>
     </PackageReference>
@@ -173,7 +175,16 @@
     <Folder Include="Assets.xcassets\Speech_Virus.imageset\" />
     <Folder Include="Assets.xcassets\Speech_Water_Virus.imageset\" />
     <Folder Include="Assets.xcassets\Speech_Water.imageset\" />
-    <Folder Include="Assets.xcassets\Character.imageset\" />
+    <Folder Include="Assets.xcassets\Character_Man.imageset\" />
+    <Folder Include="Assets.xcassets\Character_Man_Dead.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Silkscreen.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Silkscreen-bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\VirtualPet\VirtualPet.projitems" Label="Shared" />

@@ -19,11 +19,12 @@
                 VerticalOptions="CenterAndExpand"
                 TextColor="#005b40"
                 FontSize="18"
-                FontAttributes="Bold"
+                
                 BackgroundColor="Transparent"
                 Clicked="MainQuit"
                 FlexLayout.AlignSelf="Start"
-                Margin="20,0,0,0"/>
+                Margin="20,0,0,0"
+                FontFamily="Silkscreen"/>
 
 
              <Label Text=""
@@ -34,9 +35,9 @@
                     Padding="0,30,0,0"
                     FontSize="Large"
                     TextColor="#255942"
-                    FontAttributes="Bold"
-
-                       ></Label>
+                    FontFamily="Silkscreen-bold"
+                    >
+             </Label>
 
             
             <Image Source="BackgroundLab"
@@ -55,12 +56,13 @@
                    x:Name="speechImage"
                    ></Image>
 
-            <Image Source="Character"
+            <Image Source="Character_Man"
                    HorizontalOptions="FillAndExpand"
                    Aspect="AspectFit"
                    FlexLayout.AlignSelf="Stretch"
                    Margin="{OnPlatform iOS='-200,3,0,0', Default='-100,-150,0,0'}"
                    BackgroundColor="Transparent"
+                   x:Name="charImage"
                    ></Image>
 
             
@@ -73,7 +75,12 @@
                            HorizontalTextAlignment="Center"
                            VerticalOptions="CenterAndExpand"
                            x:Name="hungerStateLabel"
-                           WidthRequest="100"></Label>
+                           WidthRequest="100"
+                           FontSize="14"
+                           TextColor="#005b40"
+                           Margin="{OnPlatform iOS='10,0,0,0', Default='20,0,0,0'}"
+                           Padding="0,16,0,0"
+                           FontFamily="Silkscreen"></Label>
 
                     <ImageButton Source="HamIcon"
                                  Clicked="FeedPet"
@@ -99,11 +106,16 @@
 
                     <Label Text="Thirst"
                            HorizontalOptions="Center"
-                           
                            HorizontalTextAlignment="Center"
                            VerticalOptions="CenterAndExpand"
                            x:Name="thirstStateLabel"
-                           WidthRequest="100"></Label>
+                           WidthRequest="100"
+                           FontSize="14"
+                           TextColor="#005b40"
+                           Margin="{OnPlatform iOS='10,0,0,0', Default='20,0,0,0'}"
+                           Padding="0,16,0,0"
+                           FontFamily="Silkscreen"
+                           ></Label>
 
             
                     <ImageButton Source="WaterIcon"
@@ -127,12 +139,16 @@
                 <StackLayout Orientation="Horizontal">
 
                     <Label Text="Cure"
-                       HorizontalOptions="Center"
-                       
-                       HorizontalTextAlignment="Center"
-                       VerticalOptions="CenterAndExpand"
-                       x:Name="cureStateLabel"
-                       WidthRequest="100"></Label>
+                           HorizontalOptions="Center"
+                           TextColor="#005b40"
+                           HorizontalTextAlignment="Center"
+                           VerticalOptions="CenterAndExpand"
+                           x:Name="cureStateLabel"
+                           WidthRequest="100"
+                           FontSize="14"
+                           Margin="{OnPlatform iOS='10,0,0,0', Default='20,0,0,0'}"
+                           Padding="0,16,0,0"
+                           FontFamily="Silkscreen"></Label>
 
             
                     <ImageButton Source="SyringeIcon"
