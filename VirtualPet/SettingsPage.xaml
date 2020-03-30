@@ -1,41 +1,46 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="VirtualPet.SettingsPage">
         <!-- Place new controls here -->
-        
-        <FlexLayout Margin="0,0,0,0"
-                    Padding="40,40,40,40"
-                    AlignContent="Center"
-                    JustifyContent="Start"
-                    Direction="Column"
-                    BackgroundColor="#265a43">
+        <StackLayout  BackgroundColor="#b2f372" Margin="0" Padding="0">
+        <FlexLayout Direction="Column"
+                    AlignItems="Stretch"
+                    JustifyContent="Center"
+                    FlexLayout.Grow="1"
+                    Margin="0"
+                    Padding="{OnPlatform iOS='40,60,40,0', Default='40,10,40,0'}"
+                    BackgroundColor="Transparent">
+
             <Label Text="Settings"
                    HorizontalOptions="CenterAndExpand"
                    HorizontalTextAlignment="Center"
                    FontSize="Large"
-                   TextColor="#ffffff" Margin="0,0,0,50"
-
+                   TextColor="#255942"
+                   Margin="0,0,0,50"
+                   FontAttributes="Bold"
                    ></Label>
-            <Image  VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="FillAndExpand"
-                    Source="AppLogo"
-                    BackgroundColor="Transparent"
-                    Aspect="AspectFit"></Image>
+
+            <Label Text="Pet Name:"
+                   TextColor="#255942"></Label>
             <Entry Text=""
                    Placeholder="My Pet Name"
                    BackgroundColor="Transparent"
                    PlaceholderColor="#72BC66"
-                   TextColor="#fff"
+                   TextColor="#255942"
                    HeightRequest="50"
                    x:Name="nameEntry"
                    IsTextPredictionEnabled="False" Keyboard="Plain"
                    />
+
             <Button Text="Save"
-                    HorizontalOptions="Start"
-                    VerticalOptions="CenterAndExpand"
-                    TextColor="#5A854D"
-                    FontSize="Medium"
-                    FontAttributes="Bold"
-                    BackgroundColor="Transparent"
-                    Clicked="SettingsQuit"/>
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                TextColor="#005b40"
+                FontSize="18"
+                FontAttributes="Bold"
+                BackgroundColor="Transparent"
+                Clicked="SettingsQuit"
+                FlexLayout.AlignSelf="Center"
+                Margin="0,0,0,0"/>
         </FlexLayout>
+            </StackLayout>
 </ContentPage>
