@@ -2,45 +2,87 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="VirtualPet.SettingsPage">
         <!-- Place new controls here -->
         <StackLayout  BackgroundColor="#b2f372" Margin="0" Padding="0">
-        <FlexLayout Direction="Column"
-                    AlignItems="Stretch"
-                    JustifyContent="Center"
-                    FlexLayout.Grow="1"
-                    Margin="0"
-                    Padding="{OnPlatform iOS='40,60,40,0', Default='40,10,40,0'}"
-                    BackgroundColor="Transparent">
+            <FlexLayout Direction="Column"
+                        AlignItems="Stretch"
+                        JustifyContent="Center"
+                        FlexLayout.Grow="1"
+                        Margin="0"
+                        Padding="40,200,40,40"
+                        BackgroundColor="Transparent">
 
-            <Label Text="Settings"
-                   HorizontalOptions="CenterAndExpand"
-                   HorizontalTextAlignment="Center"
-                   FontSize="Large"
-                   TextColor="#255942"
-                   Margin="0,0,0,50"
-                   FontAttributes="Bold"
-                   ></Label>
+                <Label Text="Settings"
+                       HorizontalOptions="CenterAndExpand"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Large"
+                       TextColor="#255942"
+                       Margin="0,0,0,50"
+                       FontFamily="Silkscreen"></Label>
 
-            <Label Text="Pet Name:"
-                   TextColor="#255942"></Label>
-            <Entry Text=""
-                   Placeholder="My Pet Name"
-                   BackgroundColor="Transparent"
-                   PlaceholderColor="#72BC66"
-                   TextColor="#255942"
-                   HeightRequest="50"
-                   x:Name="nameEntry"
-                   IsTextPredictionEnabled="False" Keyboard="Plain"
-                   />
 
-            <Button Text="Save"
-                HorizontalOptions="Center"
-                VerticalOptions="CenterAndExpand"
-                TextColor="#005b40"
-                FontSize="18"
-                FontAttributes="Bold"
-                BackgroundColor="Transparent"
-                Clicked="SettingsQuit"
-                FlexLayout.AlignSelf="Center"
-                Margin="0,0,0,0"/>
-        </FlexLayout>
-            </StackLayout>
+                <Label Text="Pet Name:"
+                       TextColor="#005b40"
+                       Margin="0,0,0,0"
+                       FontFamily="Silkscreen"
+                       ></Label>
+                <Entry Text=""
+                       Placeholder="My Pet Name"
+                       BackgroundColor="Transparent"
+                       PlaceholderColor="#72BC66"
+                       TextColor="#255942"
+                       HeightRequest="50"
+                       x:Name="nameEntry"
+                       IsTextPredictionEnabled="False"
+                       Keyboard="Plain"
+                       FontFamily="Silkscreen-bold"
+                       />
+
+                <CarouselView HorizontalOptions="Center"
+                              VerticalOptions="Center"
+                              HeightRequest="200"
+                              x:Name="carSelect"
+                              CurrentItemChanged="CarouselItemChanged">
+                    <CarouselView.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Character_Man</x:String>
+                            <x:String>1</x:String>
+                            <x:String>2</x:String>
+                            <x:String>3</x:String>
+                            <x:String>4</x:String>
+                            <x:String>5</x:String>
+                        </x:Array>
+                    </CarouselView.ItemsSource>
+
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="Center">
+                                <Label Text="{Binding .}" HorizontalTextAlignment="Center" FontSize="Title" FontFamily="Silkscreen-bold" />
+                                <Image Source="{Binding .}"
+                                       HorizontalOptions="Center"
+                                       Aspect="AspectFit"
+                                       FlexLayout.AlignSelf="Stretch"
+                                      
+                                       BackgroundColor="Transparent"
+                                       x:Name="charImage"
+                                       ></Image>
+                            </FlexLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+
+                <Button Text="Save"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"
+                        TextColor="#005b40"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        BackgroundColor="Transparent"
+                        Clicked="SettingsQuit"
+                        FlexLayout.AlignSelf="Center"
+                        Margin="0,0,0,0"
+                        FontFamily="Silkscreen-bold"/>
+
+                
+
+            </FlexLayout>
+        </StackLayout>
 </ContentPage>
