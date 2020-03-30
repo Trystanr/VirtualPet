@@ -24,7 +24,7 @@
                 Clicked="MainQuit"
                 FlexLayout.AlignSelf="Start"
                 Margin="20,0,0,0"
-                FontFamily="Silkscreen"/>
+                FontFamily="{OnPlatform iOS='Silkscreen', Android='Silkscreen.ttf#'}"/>
 
 
              <Label Text=""
@@ -35,13 +35,14 @@
                     Padding="0,30,0,0"
                     FontSize="Large"
                     TextColor="#255942"
-                    FontFamily="Silkscreen-bold"
+                    FontFamily="{OnPlatform iOS='Silkscreen-bold', Android='Silkscreen-bold.ttf#'}"
                     >
              </Label>
 
             
             <Image Source="BackgroundLab"
                    HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand"
                    Aspect="AspectFit"
                    FlexLayout.AlignSelf="Stretch"
                    Margin="0,0,0,0"
@@ -60,14 +61,14 @@
                    HorizontalOptions="FillAndExpand"
                    Aspect="AspectFit"
                    FlexLayout.AlignSelf="Stretch"
-                   Margin="{OnPlatform iOS='-200,3,0,0', Default='-100,-150,0,0'}"
+                   Margin="{OnPlatform iOS='-200,3,0,0', Default='-200,3,0,0'}"
                    BackgroundColor="Transparent"
                    x:Name="charImage"
                    ></Image>
 
             
 
-            <StackLayout Margin="0,0,20,0">
+            <StackLayout Margin="{OnPlatform iOS='0,0,20,0', Default='0,0,20,0'}">
                 <StackLayout Orientation="Horizontal">
 
                     <Label Text="Hunger"
@@ -80,7 +81,7 @@
                            TextColor="#005b40"
                            Margin="{OnPlatform iOS='10,0,0,0', Default='20,0,0,0'}"
                            Padding="0,16,0,0"
-                           FontFamily="Silkscreen"></Label>
+                           FontFamily="{OnPlatform iOS='Silkscreen', Android='Silkscreen.ttf#'}"></Label>
 
                     <ImageButton Source="HamIcon"
                                  Clicked="FeedPet"
@@ -114,7 +115,7 @@
                            TextColor="#005b40"
                            Margin="{OnPlatform iOS='10,0,0,0', Default='20,0,0,0'}"
                            Padding="0,16,0,0"
-                           FontFamily="Silkscreen"
+                           FontFamily="{OnPlatform iOS='Silkscreen', Android='Silkscreen.ttf#'}"
                            ></Label>
 
             
@@ -148,7 +149,7 @@
                            FontSize="14"
                            Margin="{OnPlatform iOS='10,0,0,0', Default='20,0,0,0'}"
                            Padding="0,16,0,0"
-                           FontFamily="Silkscreen"></Label>
+                           FontFamily="{OnPlatform iOS='Silkscreen', Android='Silkscreen.ttf#'}"></Label>
 
             
                     <ImageButton Source="SyringeIcon"

@@ -7,7 +7,7 @@
                         JustifyContent="Center"
                         FlexLayout.Grow="1"
                         Margin="0"
-                        Padding="40,200,40,40"
+                        Padding="{OnPlatform iOS='40,200,40,40', Default='40,40,40,0'}"
                         BackgroundColor="Transparent">
 
                 <Label Text="Settings"
@@ -16,13 +16,14 @@
                        FontSize="Large"
                        TextColor="#255942"
                        Margin="0,0,0,50"
-                       FontFamily="Silkscreen"></Label>
+                       FontFamily="{OnPlatform iOS='Silkscreen', Android='Silkscreen.ttf#'}"
+                       ></Label>
 
 
                 <Label Text="Pet Name:"
                        TextColor="#005b40"
                        Margin="0,0,0,0"
-                       FontFamily="Silkscreen"
+                       FontFamily="{OnPlatform iOS='Silkscreen', Android='Silkscreen.ttf#'}"
                        ></Label>
                 <Entry Text=""
                        Placeholder="My Pet Name"
@@ -33,41 +34,64 @@
                        x:Name="nameEntry"
                        IsTextPredictionEnabled="False"
                        Keyboard="Plain"
-                       FontFamily="Silkscreen-bold"
+                       FontFamily="{OnPlatform iOS='Silkscreen-bold', Android='Silkscreen-bold.ttf#'}"
                        />
 
-                <CarouselView HorizontalOptions="Center"
-                              VerticalOptions="Center"
-                              HeightRequest="200"
-                              x:Name="carSelect"
-                              CurrentItemChanged="CarouselItemChanged">
-                    <CarouselView.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>Character_Man</x:String>
-                            <x:String>1</x:String>
-                            <x:String>2</x:String>
-                            <x:String>3</x:String>
-                            <x:String>4</x:String>
-                            <x:String>5</x:String>
-                        </x:Array>
-                    </CarouselView.ItemsSource>
+                <Label Text="Pet Style:"
+                       TextColor="#005b40"
+                       FontFamily="{OnPlatform iOS='Silkscreen', Android='Silkscreen.ttf#'}"
+                       Margin="0,20,0,0"
+                       ></Label>
 
-                    <CarouselView.ItemTemplate>
-                        <DataTemplate>
-                            <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="Center">
-                                <Label Text="{Binding .}" HorizontalTextAlignment="Center" FontSize="Title" FontFamily="Silkscreen-bold" />
-                                <Image Source="{Binding .}"
-                                       HorizontalOptions="Center"
-                                       Aspect="AspectFit"
-                                       FlexLayout.AlignSelf="Stretch"
+                <StackLayout Orientation="Horizontal">
+                    <ImageButton Source="Button_Left"
+                                 Clicked="ButtonPrevClicked"
+                                 Opacity="1"
+                                 x:Name="ButtonPrev"
+                                 BackgroundColor="Transparent"></ImageButton>
+                    <CarouselView HorizontalOptions="Center"
+                                  VerticalOptions="Center"
+                                  HeightRequest="200"
+                                  x:Name="carSelect"
+                                  CurrentItemChanged="CarouselItemChanged">
+                        <CarouselView.ItemsSource>
+                            <x:Array Type="{x:Type x:String}" x:Name="carSource">
+                                <x:String>Man</x:String>
+                                <x:String>Woman</x:String>
+                            </x:Array>
+                        </CarouselView.ItemsSource>
+
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <FlexLayout Direction="Column" AlignContent="Center" JustifyContent="Center">
+                                
+                                    <Image Source="{Binding ., StringFormat='Character_{0:F0}'}"
+                                           HorizontalOptions="Center"
+                                           Aspect="AspectFit"
+                                           FlexLayout.AlignSelf="Stretch"
                                       
-                                       BackgroundColor="Transparent"
-                                       x:Name="charImage"
-                                       ></Image>
-                            </FlexLayout>
-                        </DataTemplate>
-                    </CarouselView.ItemTemplate>
-                </CarouselView>
+                                           BackgroundColor="Transparent"
+                                           x:Name="charImage"
+                                           ></Image>
+                                    <Label Text="{Binding .}"
+                                           HorizontalTextAlignment="Center"
+                                           FontSize="14"
+                                           TextColor="#005b40"
+
+                                           FontFamily="{OnPlatform iOS='Silkscreen-bold', Android='Silkscreen-bold.ttf#'}"
+                                           Margin="0,20,0,0"
+                                           />
+
+                                </FlexLayout>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                    <ImageButton Source="Button_Right"
+                                 Clicked="ButtonNextClicked"
+                                 Opacity="1"
+                                 x:Name="ButtonNext"
+                                 BackgroundColor="Transparent"></ImageButton>
+                </StackLayout>
 
                 <Button Text="Save"
                         HorizontalOptions="Center"
@@ -79,7 +103,7 @@
                         Clicked="SettingsQuit"
                         FlexLayout.AlignSelf="Center"
                         Margin="0,0,0,0"
-                        FontFamily="Silkscreen-bold"/>
+                        FontFamily="{OnPlatform iOS='Silkscreen-bold', Android='Silkscreen-bold.ttf#'}"/>
 
                 
 

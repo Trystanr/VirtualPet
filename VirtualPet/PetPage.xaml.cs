@@ -37,10 +37,6 @@ namespace VirtualPet {
 
                 petNameLabel.Text = "Dead " + pet.PetName;
 
-                //hungerProgress(0);
-                //thirstProgress(0);
-                //cureProgress(0);
-
                 speechImage.Source = "Speech_Skull";
                 charImage.Source = "Character_" + pet.PetSkin + "_Dead";
 

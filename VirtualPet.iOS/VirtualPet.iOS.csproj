@@ -144,6 +144,14 @@
     <ImageAsset Include="Assets.xcassets\Character_Man.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Character_Man_Dead.imageset\Contents.json" />
     <ImageAsset Include="Assets.xcassets\Character_Man_Dead.imageset\Character_Man_Dead.png" />
+    <ImageAsset Include="Assets.xcassets\Character_Woman.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Character_Woman.imageset\Character_Woman-1.png" />
+    <ImageAsset Include="Assets.xcassets\Button_Left.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Button_Right.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Button_Right.imageset\Button_Right.png" />
+    <ImageAsset Include="Assets.xcassets\Button_Left.imageset\Button_Left-1.png" />
+    <ImageAsset Include="Assets.xcassets\Character_Woman_Dead.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Character_Woman_Dead.imageset\Character_Woman_Dead.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -177,6 +185,10 @@
     <Folder Include="Assets.xcassets\Speech_Water.imageset\" />
     <Folder Include="Assets.xcassets\Character_Man.imageset\" />
     <Folder Include="Assets.xcassets\Character_Man_Dead.imageset\" />
+    <Folder Include="Assets.xcassets\Character_Woman.imageset\" />
+    <Folder Include="Assets.xcassets\Button_Left.imageset\" />
+    <Folder Include="Assets.xcassets\Button_Right.imageset\" />
+    <Folder Include="Assets.xcassets\Character_Woman_Dead.imageset\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Silkscreen.ttf">

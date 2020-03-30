@@ -21,7 +21,7 @@
                 Padding="20,8"
                 CornerRadius="0"
                 Margin="0,100,0,0"
-                FontFamily="Silkscreen-bold"/>
+                FontFamily="{OnPlatform iOS='Silkscreen-bold', Android='Silkscreen-bold.ttf#'}"/>
             <Button Text="Options"
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="CenterAndExpand"
@@ -32,7 +32,7 @@
                 BackgroundColor="#b2f372"
                 Clicked="ButtonSettings"
                 Padding="20,8"
-                FontFamily="Silkscreen-bold"
+                FontFamily="{OnPlatform iOS='Silkscreen-bold', Android='Silkscreen-bold.ttf#'}"
                 CornerRadius="0"/>
             </StackLayout>
     </StackLayout>

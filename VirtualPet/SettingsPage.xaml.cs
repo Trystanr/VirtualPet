@@ -37,6 +37,17 @@ namespace VirtualPet {
         void CarouselItemChanged(System.Object sender, Xamarin.Forms.CurrentItemChangedEventArgs e) {
             Console.WriteLine("Item changed");
             Console.WriteLine(carSelect.Position);
+
+            if (carSelect.Position == 0) {
+                ButtonPrev.Opacity = 0.5;
+                ButtonNext.Opacity = 1;
+            } else if (carSelect.Position == (carSource.Length - 1)) {
+                ButtonNext.Opacity = 0.5;
+                ButtonPrev.Opacity = 1;
+            } else {
+                ButtonPrev.Opacity = 1;
+                ButtonNext.Opacity = 1;
+            }
         }
 
 
@@ -61,5 +72,33 @@ namespace VirtualPet {
             });
         }
 
+        void ButtonPrevClicked(System.Object sender, System.EventArgs e) {
+            if (carSelect.Position == 0) {
+
+            } else if ((carSelect.Position - 1) == 0) {
+                carSelect.ScrollTo(0);
+                ButtonPrev.Opacity = 0.5;
+                ButtonNext.Opacity = 1;
+            } else {
+                carSelect.ScrollTo(carSelect.Position - 1);
+                ButtonPrev.Opacity = 1;
+                ButtonNext.Opacity = 1;
+            }
+        }
+
+        void ButtonNextClicked(System.Object sender, System.EventArgs e) {
+            Console.WriteLine(carSource.Length);
+            if (carSelect.Position == (carSource.Length-1)) {
+
+            } else if ((carSelect.Position + 1) == (carSource.Length - 1)) {
+                carSelect.ScrollTo((carSource.Length - 1));
+                ButtonNext.Opacity = 0.5;
+                ButtonPrev.Opacity = 1;
+            } else {
+                carSelect.ScrollTo(carSelect.Position + 1);
+                ButtonNext.Opacity = 1;
+                ButtonPrev.Opacity = 1;
+            }
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace VirtualPet {
 
         public RevivePage() {
             InitializeComponent();
-
+            charImage.Source = "Character_" + pet.PetSkin + "_Dead";
             deathName.Text = pet.PetName + " has died.";
 
             if (pet.Hunger == 0) {

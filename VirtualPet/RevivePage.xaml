@@ -5,7 +5,7 @@
     <ContentPage.Content BackgroundColor="#b2f372">
          <FlexLayout  BackgroundColor="#b2f372"
                       Margin="0,0,0,0"
-                      Padding="40,200,40,40"
+                      Padding="40,80,40,40"
                       AlignContent="Start"
                       JustifyContent="Start"
                       Direction="Column" >
@@ -14,14 +14,14 @@
                    HorizontalTextAlignment="Center"
                    VerticalOptions="CenterAndExpand"
                    x:Name="deathName"
-                   FontFamily="Silkscreen-bold"
+                   FontFamily="{OnPlatform iOS='Silkscreen-bold', Android='Silkscreen-bold.ttf#'}"
                    TextColor="#005b40"></Label>
             <Label Text="He died of "
                    HorizontalOptions="Center"
                    HorizontalTextAlignment="Center"
                    VerticalOptions="CenterAndExpand"
                    x:Name="labelCOD"
-                   FontFamily="Silkscreen"
+                   FontFamily="{OnPlatform iOS='Silkscreen', Android='Silkscreen.ttf#'}"
                    TextColor="#005b40"></Label>
             <Image Source="Speech_Dots"
                    HorizontalOptions="FillAndExpand"
@@ -40,20 +40,20 @@
                    HorizontalTextAlignment="Center"
                    VerticalOptions="CenterAndExpand"
 
-                   FontFamily="Silkscreen"
+                   FontFamily="{OnPlatform iOS='Silkscreen', Android='Silkscreen.ttf#'}"
                    Margin="0,40,0,0"
                    TextColor="#005b40"></Label>
              <Label Text=" redemption. And make sure"
                    HorizontalOptions="Center"
                    HorizontalTextAlignment="Center"
                    VerticalOptions="CenterAndExpand"
-                   FontFamily="Silkscreen"
+                   FontFamily="{OnPlatform iOS='Silkscreen', Android='Silkscreen.ttf#'}"
                    TextColor="#005b40"></Label>
              <Label Text="you don't kill this one."
                    HorizontalOptions="Center"
                    HorizontalTextAlignment="Center"
                    VerticalOptions="CenterAndExpand"
-                   FontFamily="Silkscreen"
+                   FontFamily="{OnPlatform iOS='Silkscreen', Android='Silkscreen.ttf#'}"
                    TextColor="#005b40"></Label>
 
             <Entry Text=""
@@ -65,23 +65,22 @@
                    x:Name="nameEntry"
                    IsTextPredictionEnabled="False"
                    Margin="0,20,0,0"
-                   FontFamily="Silkscreen-bold"/>
+                   FontFamily="{OnPlatform iOS='Silkscreen-bold', Android='Silkscreen-bold.ttf#'}"/>
             <Button Text="New Patient"
                     HorizontalOptions="Center"
                     VerticalOptions="CenterAndExpand"
                     TextColor="#5A854D"
                     FontSize="18"
-                    FontAttributes="Bold"
                     BackgroundColor="Transparent"
                     Clicked="RevivePet"
-                    FontFamily="Silkscreen"/>
+                    FontFamily="{OnPlatform iOS='Silkscreen', Android='Silkscreen.ttf#'}"/>
              <Label Text=""
                        HorizontalOptions="Center"
                        HorizontalTextAlignment="Center"
                        VerticalOptions="CenterAndExpand"
                     x:Name="labelErr"
                     TextColor="#005b40"
-                    FontFamily="Silkscreen"></Label>
+                    FontFamily="{OnPlatform iOS='Silkscreen', Android='Silkscreen.ttf#'}"></Label>
          </FlexLayout>
     </ContentPage.Content>
 </ContentPage>
