@@ -7,7 +7,7 @@
                         JustifyContent="Center"
                         FlexLayout.Grow="1"
                         Margin="0"
-                        Padding="{OnPlatform iOS='40,200,40,40', Default='40,40,40,0'}"
+                        Padding="{OnPlatform iOS='40,80,40,40', Default='40,40,40,0'}"
                         BackgroundColor="Transparent">
 
                 <Label Text="Settings"

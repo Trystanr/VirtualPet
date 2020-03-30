@@ -16,7 +16,6 @@ namespace VirtualPet
         public MainPage()
         {
             InitializeComponent();
-            //BarTextColor = "#000";
         }
 
         async void ButtonPlay(System.Object sender, System.EventArgs e) {

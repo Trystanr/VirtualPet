@@ -40,7 +40,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Objects\VirtualPet.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Objects\VirtualPetThirstState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PetPage.xaml.cs">
-      <DependentUpon>PetPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
@@ -52,8 +51,25 @@
     <Compile Include="$(MSBuildThisFileDirectory)RevivePage.xaml.cs">
       <DependentUpon>RevivePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IDragAndDropContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IDragAndDropHoverableView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IDragAndDropMovingView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IDragAndDropReceivingView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\DragAndDropWaterView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\DragAndDropSample3ReceivingView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\DragAndDropExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\NumericExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ViewExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\ValueConversionAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\DragAndDropMeatView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Components\DragAndDropInjectView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Objects\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Interfaces\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Components\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Extensions\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Converters\" />
   </ItemGroup>
 </Project>

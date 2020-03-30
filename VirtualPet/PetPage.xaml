@@ -1,7 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:control="clr-namespace:ProgressRingControl.Forms.Plugin;assembly=ProgressRing.Forms.Plugin"
+             xmlns:components="clr-namespace:VirtualPet.Components"
+             
+             
              x:Class="VirtualPet.PetPage">
     <StackLayout  BackgroundColor="#b2f372" Margin="0" Padding="0">
         <!-- Place new controls here -->
@@ -57,16 +59,22 @@
                    x:Name="speechImage"
                    ></Image>
 
-            <Image Source="Character_Man"
+            
+
+            <components:DragAndDropSample3ReceivingView
+                BackgroundColor="Transparent"
+                x:Name="droppable"
+               
+                >
+                <Image Source="Character_Man"
                    HorizontalOptions="FillAndExpand"
                    Aspect="AspectFit"
                    FlexLayout.AlignSelf="Stretch"
-                   Margin="{OnPlatform iOS='-200,3,0,0', Default='-200,3,0,0'}"
+                   Margin="{OnPlatform iOS='-200,-16,0,0', Default='-200,3,0,0'}"
                    BackgroundColor="Transparent"
                    x:Name="charImage"
                    ></Image>
-
-            
+            </components:DragAndDropSample3ReceivingView>
 
             <StackLayout Margin="{OnPlatform iOS='0,0,20,0', Default='0,0,20,0'}">
                 <StackLayout Orientation="Horizontal">
@@ -83,10 +91,12 @@
                            Padding="0,16,0,0"
                            FontFamily="{OnPlatform iOS='Silkscreen', Android='Silkscreen.ttf#'}"></Label>
 
-                    <ImageButton Source="HamIcon"
-                                 Clicked="FeedPet"
-                                 Margin="0,21,0,0"
-                                 BackgroundColor="Transparent"/>
+                    <components:DragAndDropMeatView BackgroundColor="Transparent"
+                                                     Margin="0,21,0,0"
+                                                     Padding="0">
+                        <Image Source="HamIcon"
+                               BackgroundColor="Transparent"></Image>
+                    </components:DragAndDropMeatView>
 
                     <ProgressBar BackgroundColor="Transparent"
                                  ProgressColor="#265a43"
@@ -118,11 +128,12 @@
                            FontFamily="{OnPlatform iOS='Silkscreen', Android='Silkscreen.ttf#'}"
                            ></Label>
 
-            
-                    <ImageButton Source="WaterIcon"
-                                 Clicked="DrinkPet"
-                                 Margin="0,21,0,0"
-                                 BackgroundColor="Transparent"/>
+                    <components:DragAndDropWaterView BackgroundColor="Transparent"
+                                                     Margin="0,21,0,0"
+                                                     Padding="0">
+                        <Image Source="WaterIcon"
+                               BackgroundColor="Transparent"></Image>
+                    </components:DragAndDropWaterView>
 
                     <ProgressBar BackgroundColor="Transparent"
                                  ProgressColor="#265a43"
@@ -152,10 +163,12 @@
                            FontFamily="{OnPlatform iOS='Silkscreen', Android='Silkscreen.ttf#'}"></Label>
 
             
-                    <ImageButton Source="SyringeIcon"
-                                 Clicked="InjectPet"
-                                 Margin="0,21,0,0"
-                                 BackgroundColor="Transparent"/>
+                    <components:DragAndDropInjectView BackgroundColor="Transparent"
+                                                      Margin="0,21,0,0"
+                                                      Padding="0">
+                        <Image Source="SyringeIcon"
+                               BackgroundColor="Transparent"></Image>
+                    </components:DragAndDropInjectView>
 
                     <ProgressBar BackgroundColor="Transparent"
                                 ProgressColor="#265a43"

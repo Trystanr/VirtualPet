@@ -25,7 +25,7 @@ namespace VirtualPet {
 
             charImage.Source = "Character_" + pet.PetSkin;
         }
-
+    
         void updateUI() {
             if (pet.Hunger == 0 || pet.Thirst == 0 || pet.Cure == 0) {
 

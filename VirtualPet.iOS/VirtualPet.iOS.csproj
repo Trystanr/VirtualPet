@@ -167,6 +167,9 @@
     <PackageReference Include="Xam.Plugins.Forms.ProgressRing">
       <Version>0.1.2</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Forms.InputKit">
+      <Version>3.2.2</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets.xcassets\AppLogo.imageset\" />
