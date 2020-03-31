@@ -106,7 +106,40 @@
                         Margin="0,0,0,0"
                         FontFamily="{OnPlatform iOS='Silkscreen-bold', Android='Silkscreen-bold.ttf#'}"/>
 
-                
+                <Label Text="Credits"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="CenterAndExpand"
+
+                   FontFamily="{OnPlatform iOS='Silkscreen-bold', Android='Silkscreen-bold.ttf#'}"
+                   Margin="0,40,0,0"
+                   TextColor="#005b40"></Label>
+
+                <Label Text="Font used"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="CenterAndExpand"
+
+                   FontFamily="{OnPlatform iOS='Silkscreen', Android='Silkscreen.ttf#'}"
+                   Margin="0,8,0,0"
+                   TextColor="#005b40"></Label>
+                <Label Text="Silkscreen"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="CenterAndExpand"
+
+                   FontFamily="{OnPlatform iOS='Silkscreen', Android='Silkscreen.ttf#'}"
+                   Margin="0,4,0,0"
+                   TextColor="#005b40"></Label>
+
+                <Label Text="https://www.dafont.com/silkscreen.font"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="CenterAndExpand"
+
+                   FontFamily="{OnPlatform iOS='Silkscreen', Android='Silkscreen.ttf#'}"
+                   Margin="0,4,0,0"
+                   TextColor="#005b40"></Label>
 
             </FlexLayout>
         </StackLayout>
