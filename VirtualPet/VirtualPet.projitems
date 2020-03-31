@@ -44,7 +44,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)SettingsPage.xaml.cs">
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Objects\TimeKeeper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Objects\VirtualPetHungerState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Objects\VirtualPetCureState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs" />

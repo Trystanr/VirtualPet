@@ -4,6 +4,7 @@ namespace VirtualPet.Objects {
 
     public class VPet {
 
+        // Define all statekeys for local device saving and retrieval
         const string PetHungerStateKey = "PetHungerStateKey";
         const string PetHungerKey = "PetHunger";
 
@@ -19,6 +20,8 @@ namespace VirtualPet.Objects {
 
         const string petDeathKey = "petDeath";
 
+
+        // Create a hungerstate variable to set local storage and retrieve from storage when get is called
         public PetHungerState CurrentHungerState {
             get {
                 // Assign a key if it doesn't exist
@@ -35,6 +38,7 @@ namespace VirtualPet.Objects {
             }
         }
 
+        // Create an int hunger variable to set local storage and retrieve from storage when get is called
         public int Hunger {
             get {
                 if (App.Current.Properties.ContainsKey(PetHungerKey)) {
@@ -51,6 +55,7 @@ namespace VirtualPet.Objects {
             }
         }
 
+        // Increase hunger by 10 (100 is good)
         public void Feed() {
             if (Hunger < 91) {
                 Hunger += 10;
@@ -59,14 +64,16 @@ namespace VirtualPet.Objects {
             }
         }
 
+        // Reduce hunger by 1
         public void Starve() {
             if (Hunger > 0) {
-                Hunger -= 1;
+                Hunger -= 2;
             } else {
                 Hunger = 0;
             }
         }
 
+        // Create a thirststate variable to set local storage and retrieve from storage when get is called
         public PetThirstState CurrentThirstState {
             get {
                 // Assign a key if it doesn't exist
@@ -83,6 +90,7 @@ namespace VirtualPet.Objects {
             }
         }
 
+        // Create an int thirst variable to set local storage and retrieve from storage when get is called
         public int Thirst {
             get {
                 if (App.Current.Properties.ContainsKey(PetThirstKey)) {
@@ -99,6 +107,7 @@ namespace VirtualPet.Objects {
             }
         }
 
+        // Increase thirst by 10 (100 is good)
         public void Drink() {
             if (Thirst < 91) {
                 Thirst += 10;
@@ -107,6 +116,7 @@ namespace VirtualPet.Objects {
             }
         }
 
+        // Reduce thirst by 2
         public void Dehydrate() {
             if (Thirst > 0) {
                 Thirst -= 2;
@@ -115,6 +125,7 @@ namespace VirtualPet.Objects {
             }
         }
 
+        // Create a curestate variable to set local storage and retrieve from storage when get is called
         public PetCureState CurrentCureState {
             get {
                 // Assign a key if it doesn't exist
@@ -131,6 +142,7 @@ namespace VirtualPet.Objects {
             }
         }
 
+        // Create an int cure variable to set local storage and retrieve from storage when get is called
         public int Cure {
             get {
                 if (App.Current.Properties.ContainsKey(PetCureKey)) {
@@ -147,6 +159,7 @@ namespace VirtualPet.Objects {
             }
         }
 
+        // Increase cure by 10 (100 is good)
         public void Inject() {
             if (Cure < 91) {
                 Cure += 10;
@@ -155,6 +168,7 @@ namespace VirtualPet.Objects {
             }
         }
 
+        // Reduce cure by 2
         public void Cough() {
             if (Cure > 0) {
                 Cure -= 2;
@@ -164,7 +178,7 @@ namespace VirtualPet.Objects {
         }
 
 
-
+        // Local storage control for pet name
         public String PetName {
             get {
                 if (App.Current.Properties.ContainsKey(petNameKey)) {
@@ -179,6 +193,7 @@ namespace VirtualPet.Objects {
             }
         }
 
+        // Local storage control for pet skin
         public String PetSkin {
             get {
                 if (App.Current.Properties.ContainsKey(petSkinKey)) {
@@ -193,6 +208,7 @@ namespace VirtualPet.Objects {
             }
         }
 
+        // Local storage control for pet death, so the user cant restart the app and save the pet.
         public bool isDead {
             get {
                 if (App.Current.Properties.ContainsKey(petDeathKey)) {
@@ -209,13 +225,16 @@ namespace VirtualPet.Objects {
             }
         }
 
+        // Kill pet
         public void Die() {
             isDead = true;
         }
 
+        // Revive pet
         public void Revive() {
             isDead = false;
 
+            // Add random init values between 70 and 100 for interest
             Random generator = new Random();
 
             Hunger = generator.Next(70, 100);
