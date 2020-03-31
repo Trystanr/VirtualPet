@@ -70,7 +70,7 @@
                    HorizontalOptions="FillAndExpand"
                    Aspect="AspectFit"
                    FlexLayout.AlignSelf="Stretch"
-                   Margin="{OnPlatform iOS='-200,-16,0,0', Default='-200,3,0,0'}"
+                   Margin="{OnPlatform iOS='-200,-16,0,0', Default='-200,-16,0,0'}"
                    BackgroundColor="Transparent"
                    x:Name="charImage"
                    ></Image>

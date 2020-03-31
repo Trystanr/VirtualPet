@@ -53,12 +53,11 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.2" />
-    <PackageReference Include="Xam.Plugins.Forms.ProgressRing">
-      <Version>0.1.2</Version>
-    </PackageReference>
     <PackageReference Include="Xamarin.Forms.InputKit">
       <Version>3.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Essentials">
+      <Version>1.5.2</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -169,6 +168,10 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable-xxxhdpi\Character_Crash.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\AppLogo.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>
