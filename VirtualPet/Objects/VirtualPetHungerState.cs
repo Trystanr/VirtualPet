@@ -2,6 +2,7 @@
 
 namespace VirtualPet.Objects {
 
+    // Enum of hunger states
     public enum PetHungerState {
         full,
         peckish,
@@ -11,6 +12,7 @@ namespace VirtualPet.Objects {
 
     class PetHungerStates {
 
+        // Returns the specified hunger state
         public static string GetPetHungerState(PetHungerState hungerState) {
             switch (hungerState) {
                 case PetHungerState.full:
@@ -24,6 +26,7 @@ namespace VirtualPet.Objects {
             }
         }
 
+        // Returns the hunger state as a string
         public static PetHungerState GetPetHungerState(string hungerState) {
             switch (hungerState) {
                 case "full":
@@ -37,6 +40,7 @@ namespace VirtualPet.Objects {
             }
         }
 
+        // Returns the hunger state based on an integer as input
         public static PetHungerState GetStateFromHunger(int hungerValue) {
             if (hungerValue < 20) {
                 return PetHungerState.starving;

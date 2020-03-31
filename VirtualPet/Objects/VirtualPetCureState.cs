@@ -2,6 +2,7 @@
 
 namespace VirtualPet.Objects {
 
+    // Enum of cure states
     public enum PetCureState {
         cured,
         declining,
@@ -11,6 +12,7 @@ namespace VirtualPet.Objects {
 
     class PetCureStates {
 
+        // Returns the specified cure state
         public static string GetPetCureState(PetCureState CureState) {
             switch (CureState) {
                 case PetCureState.cured:
@@ -24,6 +26,7 @@ namespace VirtualPet.Objects {
             }
         }
 
+        // Returns the cure state as a string
         public static PetCureState GetPetCureState(string CureState) {
             switch (CureState) {
                 case "cured":
@@ -37,6 +40,7 @@ namespace VirtualPet.Objects {
             }
         }
 
+        // Returns the cure state based on an integer as input
         public static PetCureState GetStateFromCure(int CureValue) {
             if (CureValue < 20) {
                 return PetCureState.ill;

@@ -2,6 +2,7 @@
 
 namespace VirtualPet.Objects {
 
+    // Enum of thirst states
     public enum PetThirstState {
         hydrated,
         thirsty,
@@ -11,6 +12,7 @@ namespace VirtualPet.Objects {
 
     class PetThirstStates {
 
+        // Returns the specified thirst state
         public static string GetPetThirstState(PetThirstState ThirstState) {
             switch (ThirstState) {
                 case PetThirstState.hydrated:
@@ -24,6 +26,7 @@ namespace VirtualPet.Objects {
             }
         }
 
+        // Returns the thirst state as a string
         public static PetThirstState GetPetThirstState(string ThirstState) {
             switch (ThirstState) {
                 case "hydrated":
@@ -37,6 +40,7 @@ namespace VirtualPet.Objects {
             }
         }
 
+        // Returns the thirst state based on an integer as input
         public static PetThirstState GetStateFromThirst(int ThirstValue) {
             if (ThirstValue < 20) {
                 return PetThirstState.dehydrated;
