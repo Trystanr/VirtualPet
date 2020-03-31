@@ -30,6 +30,8 @@ namespace VirtualPet {
                     pet.PetSkin = "Man";
                 } else if (carSelect.Position == 1) {
                     pet.PetSkin = "Woman";
+                } else if (carSelect.Position == 2) {
+                    pet.PetSkin = "Crash";
                 }
 
                 await Navigation.PopModalAsync();
@@ -64,6 +66,8 @@ namespace VirtualPet {
                 characterSkin = 0;
             } else if (pet.PetSkin == "Woman") {
                 characterSkin = 1;
+            } else if (pet.PetSkin == "Crash") {
+                characterSkin = 2;
             }
 
             Device.StartTimer(TimeSpan.FromSeconds(0.1), () =>

@@ -58,6 +58,7 @@
                             <x:Array Type="{x:Type x:String}" x:Name="carSource">
                                 <x:String>Man</x:String>
                                 <x:String>Woman</x:String>
+                                <x:String>Crash</x:String>
                             </x:Array>
                         </CarouselView.ItemsSource>
 
