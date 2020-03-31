@@ -12,17 +12,20 @@ namespace VirtualPet {
         public SettingsPage() {
             InitializeComponent();
 
+            // Set the entry to the current pet name
             nameEntry.Text = pet.PetName;
             SetCarouselIndex();
         }
 
         async void SettingsQuit(System.Object sender, System.EventArgs e) {
 
+            // Ensure the user enters a name for the pet
             if (nameEntry.Text != "") {
                 string newPetName = nameEntry.Text;
 
                 pet.PetName = newPetName;
 
+                // Set the skins of the pets to the selected index of the carousel
                 if (carSelect.Position == 0) {
                     pet.PetSkin = "Man";
                 } else if (carSelect.Position == 1) {
@@ -35,9 +38,7 @@ namespace VirtualPet {
         }
 
         void CarouselItemChanged(System.Object sender, Xamarin.Forms.CurrentItemChangedEventArgs e) {
-            Console.WriteLine("Item changed");
-            Console.WriteLine(carSelect.Position);
-
+            // Controls the selection buttons to give feedback on if they are interactable
             if (carSelect.Position == 0) {
                 ButtonPrev.Opacity = 0.5;
                 ButtonNext.Opacity = 1;
@@ -56,6 +57,7 @@ namespace VirtualPet {
             //Xamarin forms carousel does not set index on constructor, so I implemented this workaround hack
             //Starts a timer of 100 miliseconds, but only runs it once
 
+            // This int is the index value the carousel should default to depending on the selected skin
             int characterSkin = 0;
 
             if (pet.PetSkin == "Man") {
@@ -72,6 +74,7 @@ namespace VirtualPet {
             });
         }
 
+        // Moves the carousel to the previous position and updates the button interaction handlers
         void ButtonPrevClicked(System.Object sender, System.EventArgs e) {
             if (carSelect.Position == 0) {
 
@@ -86,6 +89,7 @@ namespace VirtualPet {
             }
         }
 
+        // Moves the carousel to the next position and updates the button interaction handlers
         void ButtonNextClicked(System.Object sender, System.EventArgs e) {
             Console.WriteLine(carSource.Length);
             if (carSelect.Position == (carSource.Length-1)) {

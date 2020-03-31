@@ -8,8 +8,6 @@ using Xamarin.Forms;
 
 namespace VirtualPet
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
@@ -18,26 +16,16 @@ namespace VirtualPet
             InitializeComponent();
         }
 
+        // To the "game" screen
         async void ButtonPlay(System.Object sender, System.EventArgs e) {
             var modalPage = new PetPage();
-
-            modalPage.Disappearing += (sender2, e2) => {
-                Console.WriteLine("The modal page is dismissed, do something now");
-            };
-
             await Navigation.PushModalAsync(modalPage);
-            Console.WriteLine("The modal page is now on screen, hit back button");
         }
 
+        // To the "settings" screen
         async void ButtonSettings(System.Object sender, System.EventArgs e) {
             var modalPage = new SettingsPage();
-
-            modalPage.Disappearing += (sender2, e2) => {
-                Console.WriteLine("The modal page is dismissed, do something now");
-            };
-
             await Navigation.PushModalAsync(modalPage);
-            Console.WriteLine("The modal page is now on screen, hit back button");
         }
     }
 }
