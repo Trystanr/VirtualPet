@@ -5,9 +5,6 @@ using System.Linq;
 using Foundation;
 using UIKit;
 
-using ProgressRingControl;
-using ProgressRingControl.Forms.Plugin.iOS;
-
 namespace VirtualPet.iOS
 {
     // The UIApplicationDelegate for the application. This class is responsible for launching the 
@@ -26,8 +23,6 @@ namespace VirtualPet.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options) {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-
-            ProgressRingRenderer.Init();
 
             return base.FinishedLaunching(app, options);
         }
