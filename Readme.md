@@ -1,6 +1,6 @@
 # Virtual Pet
 
-This is a demo project which aims to showcase the cross-platform features of C# and Xamarin forms.
+This is a demo project which aims to showcase the cross-platform features of C# and Xamarin forms. This project was build for the Interaction Development 300 module at Open Window in the first term of 2020.
 
 ## Getting Started
 
@@ -22,25 +22,25 @@ git clone https:://github.com/Trystanr/VirtualPet.git
 Use `Open Workspace` in Visual Studio.
 
 3. Ensure the following Nuget packages are installed:
-  - [Coverlet Collector](https://www.nuget.org/packages/coverlet.collector/)
-  - [.NET Test SKD](https://www.nuget.org/packages/Microsoft.NET.Test.Sdk/16.6.0-preview-20200318-01)
-  - [TestAdapter](https://www.nuget.org/packages/MSTest.TestAdapter/)
-  - [TestFramework](https://www.nuget.org/packages/MSTest.TestFramework/)
-  - [Xamarin.Essentials](https://www.nuget.org/packages/Xamarin.Essentials/)
-  - [Xamarin.Forms](https://www.nuget.org/packages/Xamarin.Forms/4.6.0.494-pre2)
-  - [Xamarin.Forms.InputKit](https://www.nuget.org/packages/Xamarin.Forms.InputKit/3.3.0-pre.3)
+    - [Coverlet Collector](https://www.nuget.org/packages/coverlet.collector/)
+    - [.NET Test SKD](https://www.nuget.org/packages/Microsoft.NET.Test.Sdk/16.6.0-preview-20200318-01)
+    - [TestAdapter](https://www.nuget.org/packages/MSTest.TestAdapter/)
+    - [TestFramework](https://www.nuget.org/packages/MSTest.TestFramework/)
+    - [Xamarin.Essentials](https://www.nuget.org/packages/Xamarin.Essentials/)
+    - [Xamarin.Forms](https://www.nuget.org/packages/Xamarin.Forms/4.6.0.494-pre2)
+    - [Xamarin.Forms.InputKit](https://www.nuget.org/packages/Xamarin.Forms.InputKit/3.3.0-pre.3)
 
-4. The folliwing simulators were used for deployment:
-  - iOS - iPhone 11 iOS 13.3
-  - Android - Pixel 2 (API 28)
+4. The following simulators were used for deployment:
+    - iOS - iPhone 11 iOS 13.3
+    - Android - Pixel 2 (API 28)
 
 5. If there is an error, complete the following steps:
-  - Clean the project
-  - Remove all Nuget packages
-  - Reinstall all Nuget packages
-  - Close VS
-  - Open VS
-  - Rebuild and run the app
+    1. Clean the project
+    2. Remove all Nuget packages
+    3. Reinstall all Nuget packages
+    4. Close VS
+    5. Open VS
+    6. Rebuild and run the app
 
 ## Unit Tests
 
