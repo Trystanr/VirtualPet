@@ -19,7 +19,7 @@ git clone https:://github.com/Trystanr/VirtualPet.git
 ```
 2. Open the project
 
-Use `Open Workspace` in Visual Studio.
+    Use `Open Workspace` in Visual Studio.
 
 3. Ensure the following Nuget packages are installed:
     - [Coverlet Collector](https://www.nuget.org/packages/coverlet.collector/)
