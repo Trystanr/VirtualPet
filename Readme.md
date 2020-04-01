@@ -1,3 +1,5 @@
+<img src="https://i.imgur.com/nbKwO5W.png" height="80">
+
 # Virtual Pet
 
 This is a demo project which aims to showcase the cross-platform features of C# and Xamarin forms. This project was build for the Interaction Development 300 module at Open Window in the first term of 2020.
